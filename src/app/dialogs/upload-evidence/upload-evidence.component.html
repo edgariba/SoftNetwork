@@ -1,0 +1,35 @@
+<loading *ngIf="isLoading"></loading>
+<div class="dialog-container">
+    <div>
+        <mat-icon mat-dialog-close  class="close-button">close</mat-icon>
+    </div>
+    <form [formGroup]="formEvidence" (ngSubmit)="evidenceSubmit()">
+        <div class="dialog-spacer"></div>
+        <span class="file-name-span">{{fileName}}</span>
+        <div class="text-upload">
+            <label class="custom-file-upload-btn">
+                <input type="file" id="file" formControlName="file" (change)="onFileSelected($event)">Upload your evidence
+            </label>
+        </div>
+        <div class="time-upload" *ngIf="rating_type === 'tiempo'">
+            <span class="input-label">Time</span>
+            <input type="number" class="time-input" placeholder="Hrs" id="timehrs" formControlName="timehrs">
+            <input type="number" class="time-input" placeholder="Min" id="timemin" formControlName="timemin">
+            <input type="number" class="time-input" placeholder="Sec" id="timesec" formControlName="timesec">
+        </div>
+        <div class="distance-upload" *ngIf="rating_type === 'kilometers'">
+            <span class="input-label">Distance</span>
+            <input type="number" class="time-input" placeholder="Mts" id="distance" formControlName="distance" >
+        </div>
+        <div class="description-upload" *ngIf="rating_type === 'judge'">
+            <span class="input-label">Description</span>
+            <input type="text" class="description-input" placeholder="#" id="description" formControlName="description" >
+        </div>
+        <div class="time-upload" *ngIf="rating_type === 'maxrepetitions'">
+            <span class="input-label">Number of repetitions or score</span>
+            <input type="number" class="time-input" placeholder="#" id="repetitions" formControlName="repetitions" >
+        </div>
+        <button mat-button class="save-record-button" type="submit">Save new record</button>
+    </form>
+</div> 
+

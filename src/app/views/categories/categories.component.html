@@ -1,0 +1,23 @@
+<loading *ngIf="isLoading"></loading>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-4 col-sm-12" *ngFor="let item of catWithActivities">
+            <mat-card>
+                <div class="row">
+                    <div class="col-4">
+                        <img src="./assets/img/categories/{{item.image}}" alt="">
+                    </div>
+                    <div class="col-8" style="text-align: center;">
+                        <h2 class="texto-cat">{{addNumberData(item.id_category)}} {{item.category}}</h2>
+                    </div>
+                </div>
+            </mat-card>
+            <div class="list-container">
+                <mat-list role="list" *ngFor="let acti of item.activities">
+                    <mat-list-item role="listitem" (click)="showActivity(acti)"><img src="./assets/img/activities/{{acti.image_activity}}" class="img-activity" alt=""> <span class="text-act">{{acti.activity}}</span></mat-list-item>            
+                </mat-list>
+            </div>
+        </div>
+    </div>
+
+</div>

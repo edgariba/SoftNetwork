@@ -1,0 +1,46 @@
+<div class="image">
+    <mat-toolbar class="initial-toolbar">
+        <img src="./assets/img/toolbar/cx-portada.png" alt="CXA Logo" class="logo-left">
+        <span class="spacer"></span>
+        <img src="./assets/img/toolbar/cisco-portada.png" alt="Cisco Logo" class="logo-right">
+    </mat-toolbar>
+    <div class="main-content">
+        <div class="main-page-div">
+            <div class="countdown-div">
+                <!-- <app-countdown></app-countdown> -->
+            </div>
+        </div>
+        <div class="main-page-div"><span class="main-title">CXA Wellness Games</span></div>
+        <div class="main-page-div"><button class="enter-button" mat-raised-button (click)="showModal(modalLogin);">Enter</button></div>
+        <div class="main-page-div"><button class="enter-button" mat-raised-button (click)="openRegisterDialog();">Register</button></div>
+        <!-- <div class="main-page-div"><button class="enter-button" mat-raised-button (click)="btnClick()">Home</button></div> -->
+    </div>
+</div>
+
+<ng-template #modalLogin>
+    <h1 mat-dialog-title class="login-title">Sign In</h1>
+
+    <form [formGroup]="formLogin" (ngSubmit)="login()">
+        <div mat-dialog-content>
+            <mat-form-field>
+                <input matInput type="email" class="login-input" id="email" formControlName="email" placeholder="Email">
+                <mat-error *ngIf="formLogin.get('email')?.hasError('required')">
+                    The email is required.
+                </mat-error>
+                <mat-error *ngIf="formLogin.get('email')?.hasError('maxlength')">
+                    The maximum length is 250 characters.
+                </mat-error>
+                <mat-error *ngIf="formLogin.get('email')?.hasError('email')">
+                    Please enter a valid email.
+                </mat-error>
+            </mat-form-field> <br>
+            <mat-form-field>
+                <input matInput type="password" class="login-input" id="password" formControlName="password" placeholder="Password">
+                <mat-error *ngIf="formLogin.get('email')?.hasError('required')">
+                    The password is required.
+                </mat-error>
+            </mat-form-field> <br>
+            <button class="btn-login" type="submit">Enter</button>
+        </div>
+    </form>
+</ng-template>

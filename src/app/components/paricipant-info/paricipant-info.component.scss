@@ -1,0 +1,28 @@
+@import "../../app.component.scss";
+
+.continer-participant-info{
+    width: 80%;
+	height: auto;
+}
+.part-img {
+    float: left; 
+    margin-right: 20px;
+    height: 100px;
+    width: auto;	
+} 
+.participant-flag{
+    max-width: 25px;
+    margin-right: 5px;
+} 
+.edit-info{
+    color: $light-blue;
+    font-weight: bold;
+    font-size: 0.8rem;
+}
+.edit-info:hover{
+    cursor: pointer;
+}
+.part-name, .part-country{
+    color: $grey-font;
+    font-size: 0.8rem;
+}

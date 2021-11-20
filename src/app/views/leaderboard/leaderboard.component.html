@@ -1,0 +1,32 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-4 col-sm-12" *ngFor="let item of leaderboardMain; let i = index"> 
+            <div class="circulo circulo-gd" [class.oro]="i == 0" [class.plata]="i == 1" [class.bronce]="i == 2">
+                <span>{{i+1}}</span>
+            </div>
+            <div class="arrow-down" [class.arrow-oro]="i == 0" [class.arrow-plata]="i == 1" [class.arrow-bronce]="i == 2"></div>
+            <div class="big-flag-container">
+                <img src="./assets/img/countries/{{item.country.image}}" alt="" class="big-flag">
+            </div>
+            <div style="width: 50%; margin: 0 auto;">
+                <div *ngFor="let medal of item.medals" class="container-medal-number">
+                    <div class="circulo-sm {{medal.type}}"></div>
+                    <div class="medal-number">{{medal.winners}}</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row small-leaderboard">
+        <div class="col-md-4 col-sm-12" *ngFor="let data of leaderboardSecondary; let j = index" style="margin-bottom: 20px;">
+            <div style="float: left;">
+                <img src="./assets/img/countries/{{data.country.image}}" alt="" class="sm-flag">
+            </div>
+            <div style="width: 50%; margin: 0 auto;">
+                <div *ngFor="let medalsm of data.medals" class="container-medal-number">
+                    <div class="circulo-sm {{medalsm.type}}"></div>
+                    <div class="medal-number">{{medalsm.winners}}</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,62 @@
+@import "../app.component.scss";
+
+.sidenav-container {
+  height: 100%;
+}
+.sidenav {
+  width: 200px;
+}
+.sidenav .mat-toolbar {
+  background: inherit;
+}
+.mat-toolbar-single-row, .mat-sidenav-container{
+  background: none;
+}
+.mat-sidenav-content{
+  margin-top: 20px;
+}
+.mat-toolbar.mat-primary {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+.internal-toolbar{
+  overflow: hidden;
+}
+.toolbar-right{
+  background-color: $light-blue;
+  border-top-left-radius: 30px 50%;
+  border-bottom-left-radius: 30px 50%;
+  padding-left: 30px;
+  padding-right: 30px;
+  margin-right: -20px;
+}
+.toolbar-right .mat-button{
+  color: white;
+  font-weight: 200;
+  font-size: 1.2rem;
+  padding: 10px;
+}
+.home-button{
+  text-decoration: underline;
+  font-weight: bold !important;
+}
+.toolbar-button{
+  padding-right: 20px !important;
+  padding-left: 20px !important;
+}
+.logo-cisco, .logo-cxa{
+  margin-left: 20px;
+  max-width: 30%;
+  height: auto;
+}
+.rings-header{
+  max-height: 50px;
+  vertical-align: middle;
+}
+.logo-wellness{
+  margin-left: 20px;
+  width: 100px;
+  max-width: 30%;
+  height: auto;
+}

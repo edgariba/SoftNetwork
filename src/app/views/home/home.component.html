@@ -1,0 +1,50 @@
+
+    <div class="countdown-div">
+        <app-countdown></app-countdown>
+    </div>
+    <div [class]="(isHandset$ | async) ? 'home-title-mobile' : 'home-title'">
+        CXA Wellness Games
+    </div>
+    <div [class]="(isHandset$ | async) ? 'home-description-mobile' : 'home-description'">
+        CX Academy is happy to invite you to CXA Olympic Wellness Games 2021.
+    </div>
+    <div [class]="(isHandset$ | async) ? 'home-subtitle-mobile' : 'home-subtitle'" [routerLink]="['/categories']">
+        Start participating now!
+    </div>
+    <div class="home-squares">
+        <mat-grid-list [cols]="(isHandset$ | async) ? 1 : 2">
+            <mat-grid-tile>
+                <div class="info-container green-bg">
+                    <div class="info-img">
+                        <img src="./assets/img/home/how.png" alt="" class="info-header">
+                    </div>
+                    <div class="info-title green-bg">How to participate?</div>
+                    <div class="info-box green-bg">
+                        Enroll yourself in each category of your interest and compete against others for the three medals, you can enroll in many categories as you want! Try them all! You will be able to find more information about each categories in the categories tab.
+                    </div>
+                </div>
+            </mat-grid-tile>
+            <mat-grid-tile>
+                <div class="info-container blue-bg">
+                    <div class="info-img">
+                        <img src="./assets/img/home/requirements.png" alt="" class="info-header">
+                    </div>
+                    <div class="info-title blue-bg">Dynamic</div>
+                    <div class="info-box blue-bg">
+                        From July 23th through August 8th we will be hosting an internal CXA Olympic Wellness Competition. The event will include 25 different categories and you will be able participate in the ones of your choice! It’s not only about sports we will have a lot of categories from running to dress up your pet! Individual or teams! 
+                    </div>
+                </div>
+            </mat-grid-tile>
+            <!-- <mat-grid-tile>
+                <div class="info-container orange-bg">
+                    <div class="info-img">
+                        <img src="./assets/img/home/requirements.png" alt="" class="info-header">
+                    </div>
+                    <div class="info-title orange-bg">Requirements</div>
+                    <div class="info-box orange-bg">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam arcu quam, blandit vitae cursus ac, pulvinar vel nulla. Nam pharetra tortor ut fermentum ornare. Donec commodo eget urna a rutrum. Morbi rhoncus nulla sit amet ullamcorper consequat. Cras consectetur, nisi consequat feugiat pretium, orci nunc pretium ante, ut elementum elit risus et neque.
+                    </div>
+                </div>
+            </mat-grid-tile> -->
+        </mat-grid-list>
+    </div>

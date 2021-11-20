@@ -1,0 +1,44 @@
+@import '../../app.component.scss';
+.wrapper {
+    display: flex;
+    justify-content: space-around;
+  }
+  button {
+    margin-top: auto;
+  }
+
+  .mat-card{
+      padding: 0px !important;
+      width: 100%; border: solid #dddddd 1px; box-shadow: none
+  }
+
+  .texto-cat{
+    position: relative;
+    float: left;
+    top: 50%;
+    left: 50%;
+    font-size: 30px;
+    color: $dark-grey;
+    opacity: 1;
+    font-family: "CiscoSans";
+    font-weight: bold;
+    transform: translate(-50%, -50%);
+  }
+
+  .text-act{
+    margin-left: 10px; font-family: 'CiscoSans'; color: $dark-grey;
+  }
+
+  .img-activity{
+      width: 62px;
+  }
+
+  mat-list-item{
+      margin-top: 5px;
+      margin-bottom: 25px;
+      cursor: pointer;
+  }
+  .list-container{
+    max-height: 500px;
+    overflow-y: auto;
+  }

@@ -1,0 +1,63 @@
+<div>
+    <form [formGroup]="formParticipant" (ngSubmit)="registerParticipant()" novalidate autocomplete="off">
+        <div mat-dialog-content>
+            <div style="display: flex;flex-direction: column; margin:1rem auto; max-width: 600px; padding: 1rem;">
+                <mat-label>Name</mat-label>
+                <mat-form-field>
+                    <input matInput type="text" maxlength="250" formControlName="name" required>
+                    <mat-error *ngIf="formParticipant.get('name')?.hasError('required')">
+                        Name is required.
+                    </mat-error>
+                    <mat-error *ngIf="formParticipant.get('name')?.hasError('maxlength')">
+                        The maximum length is 250 characters.
+                    </mat-error>
+                </mat-form-field>
+                <mat-label>Last name</mat-label>
+                <mat-form-field>
+                    <input matInput type="text" maxlength="250" formControlName="last_name" required>
+                    <mat-error *ngIf="formParticipant.get('last_name')?.hasError('required')">
+                        Last name is required.
+                    </mat-error>
+                    <mat-error *ngIf="formParticipant.get('last_name')?.hasError('maxlength')">
+                        The maximum length is 250 characters.
+                    </mat-error>
+                </mat-form-field>
+                <mat-label>Email</mat-label>
+                <mat-form-field>
+                    <input matInput type="text" maxlength="250" formControlName="email" required>
+                    <mat-error *ngIf="formParticipant.get('email')?.hasError('required')">
+                        Email is required.
+                    </mat-error>
+                    <mat-error *ngIf="formParticipant.get('email')?.hasError('maxlength')">
+                        The maximum length is 250 characters.
+                    </mat-error>
+                </mat-form-field>
+                <mat-label>Password</mat-label>
+                <mat-label class="warning-pass">Do not use your Cisco password</mat-label>
+                <mat-form-field>
+                    <input matInput type="password" maxlength="250" formControlName="password" required>
+                    <mat-error *ngIf="formParticipant.get('password')?.hasError('required')">
+                        Password is required.
+                    </mat-error>
+                    <mat-error *ngIf="formParticipant.get('password')?.hasError('maxlength')">
+                        The maximum length is 250 characters.
+                    </mat-error>
+                </mat-form-field>
+                <mat-label>CX Centers</mat-label>
+                <mat-select formControlName="hash_country" required>
+                    <mat-option *ngFor="let country of countries" [value]="country.hash_country">
+                        {{country.country}}
+                    </mat-option>
+                </mat-select>
+                <mat-error *ngIf="formParticipant.get('hash_country')?.hasError('required')">
+                    CX Center is required.
+                </mat-error>
+            </div>
+        </div>
+        <div mat-dialog-actions>
+            <button mat-button (click)="cancel()">Cancel</button>
+            <button mat-button type="submit">Register</button>
+        </div>
+    </form>
+</div>
+

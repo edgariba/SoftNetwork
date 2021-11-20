@@ -1,0 +1,56 @@
+@import "../../app.component.scss";
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+input[type=number] {
+  -moz-appearance: textfield;
+}
+input[type="file"] {
+    display: none;
+}
+
+.close-button{
+    color: $light-blue;
+    float: right;
+}
+.text-upload{
+    padding-top: 25px;
+    color: $light-blue;
+}
+.time-input{
+    width: 50px;
+    margin-left: 20px;
+}
+.description-input{
+    margin-left: 20px;
+}
+.time-input, .description-input{
+    margin-top: 10px;
+    color: $grey-font;
+}
+.input-label{
+    color: $grey-font;
+}
+.save-record-button{
+    float: right;
+    background-color: $light-blue;
+    color: white;
+    font-weight: bold;
+    margin-top: 10px;
+}
+.custom-file-upload-btn {
+    color: $light-blue;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+.file-name-span{
+    font-weight: 200;
+    color: $grey-font;
+}
+.dialog-spacer{
+    height: 30px;
+}

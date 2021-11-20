@@ -1,0 +1,63 @@
+@import "../../app.component.scss";
+
+.head-0{
+    background-color: $light-blue;
+}
+.head-1{
+    background-color: $dark-blue;
+}
+.head-2{
+    background-color: $green;
+}
+.head-3{
+    background-color: $orange;
+}
+.judges-container{
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+.head-card{
+    height: 137px;
+}
+.content-card{
+    height: 299px;
+    background-color: #F0F0F0;
+}
+.judge-card{
+    position: relative;
+    width: 334px;
+    border-radius: 25px;
+    overflow: hidden;
+}
+.img-judge-container{
+    position: absolute;
+    width: 100%;
+    top: 50px;
+}
+.img-judge{
+    width: 182px;
+    height: 182px;
+    display:block;
+    margin:auto;
+    border-radius: 50%;
+    border: 5px solid white;
+}
+.judge-name, .judge-title, .judge-description{
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    color: $grey-font;
+}
+.judge-name{
+    padding-top: 120px;
+    font-weight: bold;
+    font-size: 1rem;
+}
+.judge-description{
+    font-size: 0.8rem;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+.content-card{
+    overflow-y: scroll;
+}

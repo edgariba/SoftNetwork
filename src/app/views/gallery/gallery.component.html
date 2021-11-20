@@ -1,0 +1,9 @@
+<div class="container-fluid">
+    <div class="row">
+        <div *ngFor="let item of gallery" class="col-md-4 col-sm-12">
+            <img class="img-evidence" *ngIf="item.type_evidence == 'Foto'" src="{{imagesEvidence}}{{item.participant.hash_participant}}/{{item.hash_activity}}/{{item.evidence}}">
+            <video class="img-evidence" controls *ngIf="item.type_evidence == 'Video'" src="{{imagesEvidence}}{{item.participant.hash_participant}}/{{item.hash_activity}}/{{item.evidence}}"></video>
+        </div>
+    </div>
+</div>
+

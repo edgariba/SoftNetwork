@@ -1,0 +1,73 @@
+@import "../../app.component.scss";
+
+.countdown-div{
+    margin-top: 80px;
+}
+.home-title, .home-description, .home-subtitle{
+    width: 50%;
+}
+.home-title-mobile, .home-description-mobile, .home-subtitle-mobile{
+    width: 90%;
+}
+.home-title, .home-description, .home-subtitle, .home-title-mobile, .home-description-mobile, .home-subtitle-mobile{
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+.home-title, .home-title-mobile{
+    color: $light-blue;
+    font-size: 2rem;
+    font-weight: bold;
+    margin-top: 20px;
+}
+.home-description, .home-description-mobile{
+    color: $grey-font;
+    font-weight: 200;
+    font-size: 0.8rem;
+}
+.home-subtitle, .home-subtitle-mobile{
+    color: $orange;
+    font-size: 1.5rem;
+    margin-top: 20px;
+    font-weight: bold;
+}
+.home-subtitle:hover, .home-subtitle-mobile:hover{
+    cursor: pointer;
+}
+.home-subtitle-mobile{
+    margin-bottom: 20px;
+}
+.info-container{
+    margin-left: 15px;
+    margin-right: 15px;
+}
+.info-header{
+    width: 100%;
+    height: auto;
+}
+.info-title{
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.2rem;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    color: white;
+}
+.info-box{
+    text-align: center;
+    margin-left: 15%;
+    margin-right: 15%;
+    font-weight: 200;
+    font-size: 0.8rem;
+    margin-bottom: 30px;
+    color: white;
+}
+.orange-bg{
+    background-color: $orange;
+} 
+.blue-bg{
+    background-color: $light-blue;
+} 
+.green-bg{
+    background-color: $green;
+}

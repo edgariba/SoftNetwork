@@ -29,7 +29,7 @@
       <img src="./assets/img/toolbar/logowellness.png" alt="Logo Wellness" class="logo-wellness">
       <span class="spacer"></span>
       <div class="toolbar-right" *ngIf="!(isHandset$ | async)">
-        <a mat-button [routerLink]="['/home']" [routerLinkActive]="['link_active']" class="toolbar-button">Home</a>
+        <a mat-button [routerLink]="['/']" [routerLinkActive]="['link_active']" class="toolbar-button">Home</a>
         <a mat-button [routerLink]="['/categories']" [routerLinkActive]="['link_active']" class="toolbar-button">Categories</a>
         <a mat-button [routerLink]="['/calendar']" [routerLinkActive]="['link_active']" class="toolbar-button">Calendar</a>
         <a mat-button [routerLink]="['/leaderboard']" [routerLinkActive]="['link_active']" class="toolbar-button">Leaderboard</a>

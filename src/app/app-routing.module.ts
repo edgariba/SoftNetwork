@@ -23,10 +23,10 @@ export const AppRoutes: Routes = [{
       redirectTo: '/',
       pathMatch: 'full'
     },
-    {
+    /* {
       path: '',
       loadChildren: () => import('./views/initial/initial.module').then(m => m.InitialModule)
-    },
+    }, */
     {
       path: '',
       loadChildren:

@@ -1,62 +1,105 @@
 @import "../app.component.scss";
+@import '../../assets/styles/variable.scss';
+.body{
+	font-family: 'Gothic A1', sans-serif;
+	font-size:16px;
+	}
+	p{
+	color:#6c6c6f;
+	font-size:1em;
+	}
+	h1,h2,h3,h4,h5,h6{color:#323233;text-transform:uppercase;}
+.navbar-brand  span{
+	font-size:25px;font-weight:700;letter-spacing:0.1em;
+    font-family: 'Kaushan Script','Helvetica Neue',Helvetica,Arial,cursive;
+}
+.navbar {
+  background-color: #000;
+    box-shadow: 0 0px 0px 0 rgba(0, 0, 0, 0), 0 0px 10px 0 rgba(0, 0, 0, 0);
+    font-weight: 300;
+}
+.navbar-brand {
+	color: #fff;
+	font-size:25px;
+    font-family: 'Kaushan Script','Helvetica Neue',Helvetica,Arial,cursive;
+	font-weight:700;
+	letter-spacing:0.1em;
+}
 
-.sidenav-container {
-  height: 100%;
+.navbar-nav .nav-item .nav-link{
+	padding: 1.1em 1em!important;
+	font-size: 95%;
+    font-weight: 500;
+    letter-spacing: 1px;
+    color: #fff;
+   font-family: 'Gothic A1', sans-serif;
+   font-weight: bold;
 }
-.sidenav {
-  width: 200px;
+
+.link_active{
+	color: $nav_active !important;
+	background-color:#0000ff00 !important;    
 }
-.sidenav .mat-toolbar {
-  background: inherit;
+
+.navbar-nav .nav-item .nav-link:hover{
+	color:$nav_hover;
 }
-.mat-toolbar-single-row, .mat-sidenav-container{
-  background: none;
+.navbar-expand-md .navbar-nav .dropdown-menu{
+	border-top:3px solid #fed136;
 }
-.mat-sidenav-content{
-  margin-top: 20px;
+.dropdown-item:hover{background-color:#fed136;color:#fff;}
+nav{-webkit-transition: padding-top .3s,padding-bottom .3s;
+    -moz-transition: padding-top .3s,padding-bottom .3s;
+    transition: padding-top .3s,padding-bottom .3s;
+    border: none;
+	}
+	
+ .shrink {
+    padding-top: 0;
+    padding-bottom: 0;
+    background-color: #807f82;
 }
-.mat-toolbar.mat-primary {
-  position: sticky;
-  top: 0;
-  z-index: 1;
+
+.logoBlanco{
+	width: 180px;
+	display: block;
 }
-.internal-toolbar{
-  overflow: hidden;
+
+.logoColor{
+	width: 95px;
+	display: block;
 }
-.toolbar-right{
-  background-color: $light-blue;
-  border-top-left-radius: 30px 50%;
-  border-bottom-left-radius: 30px 50%;
-  padding-left: 30px;
-  padding-right: 30px;
-  margin-right: -20px;
+
+/* mobile view */
+@media (max-width:500px)
+{
+	.navbar-nav{
+		background-color:#000;
+		border-top:3px solid #fed136;
+		color:#fff;
+		z-index:1;
+		margin-top:5px;
+		}
+	.navbar-nav .nav-item .nav-link{
+	padding: 0.7em 1em!important;
+	font-size: 100%;
+    font-weight: 500;
+    }
+	.banner-text{
+	padding:150px 0 150px 0;
 }
-.toolbar-right .mat-button{
-  color: white;
-  font-weight: 200;
-  font-size: 1.2rem;
-  padding: 10px;
+
 }
-.home-button{
-  text-decoration: underline;
-  font-weight: bold !important;
+.tile.socialmedia:hover{
+	color: $nav_active !important;
 }
-.toolbar-button{
-  padding-right: 20px !important;
-  padding-left: 20px !important;
+.tile.socialmedia{
+	color: white;
+	font-size: 30px;
+	text-align: center;
+	line-height: 50px;
+	position: relative;
+	top: 5px;
+	margin-left: 10px;
 }
-.logo-cisco, .logo-cxa{
-  margin-left: 20px;
-  max-width: 30%;
-  height: auto;
-}
-.rings-header{
-  max-height: 50px;
-  vertical-align: middle;
-}
-.logo-wellness{
-  margin-left: 20px;
-  width: 100px;
-  max-width: 30%;
-  height: auto;
-}
+

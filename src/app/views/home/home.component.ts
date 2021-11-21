@@ -8,18 +8,7 @@ import { map, shareReplay } from 'rxjs/operators';
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss']
 })
-export class HomeComponent implements OnInit{
-
-  isHandset$: Observable<boolean> = this.breakpointObserver.observe(Breakpoints.Handset)
-    .pipe(
-      map(result => result.matches),
-      shareReplay()
-    );
-
-  constructor(private breakpointObserver: BreakpointObserver) {
-    document.getElementById("myHeader").style.display = "";
-  }
-
+export class HomeComponent implements OnInit {
   ngOnInit(): void {
 
   }

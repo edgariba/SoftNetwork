@@ -1,18 +1,9 @@
 import { Routes } from '@angular/router';
 import { FullComponent } from './layouts/full.component';
-
-/* const routes: Routes = [
-  { path: '', component: InitialComponent},
-  { path: 'home', component: HomeComponent},
-  { path: 'calendar', component: CalendarComponent},
-  { path: 'categories', component: CategoriesComponent},
-];
-
-@NgModule({
-  imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
-})
-export class AppRoutingModule { } */
+import { ContactoComponent } from './views/contacto/contacto.component';
+import { HomeComponent } from './views/home/home.component';
+import { PortafolioComponent } from './views/portafolio/portafolio.component';
+import { ServiciosComponent } from './views/servicios/servicios.component';
 
 export const AppRoutes: Routes = [{
   path: '',
@@ -23,15 +14,12 @@ export const AppRoutes: Routes = [{
       redirectTo: '/',
       pathMatch: 'full'
     },
-    /* {
-      path: '',
-      loadChildren: () => import('./views/initial/initial.module').then(m => m.InitialModule)
-    }, */
-    {
-      path: '',
-      loadChildren:
-        () => import('./views/views.module').then(m => m.ViewsModule)
-    }
+    { path: '', component: HomeComponent },
+    { path: 'nosotros', component: HomeComponent },
+    { path: 'nosotros', component: HomeComponent },
+    { path: 'servicios', component: ServiciosComponent },
+    { path: 'portafolio', component: PortafolioComponent },
+    { path: 'contacto', component: ContactoComponent },
   ]
 }];
 

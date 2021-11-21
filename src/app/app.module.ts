@@ -9,19 +9,28 @@ import { AppRoutes } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { InterfacesService } from './classes/interfaces';
 import { DemoMaterialModule } from './demo-material.module';
-import { AuthGuard } from './guards/auth.guard';
 import { FullComponent } from './layouts/full.component';
 import { MainNavComponent } from './main-nav/main-nav.component';
-import { CommonAlertsService } from './services/common/common-alerts.service';
-import { CommonService } from './services/common/common.service';
-
-
+import { SpinnerComponent } from './shared/spinner.component';
+import { FooterComponent } from './footer/footer.component';
+import { HomeComponent } from './views/home/home.component';
+import { NosotrosComponent } from './views/nosotros/nosotros.component';
+import { ServiciosComponent } from './views/servicios/servicios.component';
+import { PortafolioComponent } from './views/portafolio/portafolio.component';
+import { ContactoComponent } from './views/contacto/contacto.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     FullComponent,
-    MainNavComponent
+    MainNavComponent,
+    SpinnerComponent,
+    FooterComponent,
+    HomeComponent,
+    NosotrosComponent,
+    ServiciosComponent,
+    PortafolioComponent,
+    ContactoComponent
   ],
   imports: [
     BrowserModule,
@@ -33,10 +42,7 @@ import { CommonService } from './services/common/common.service';
   ],
   providers: [
     { provide: LocationStrategy, useClass: HashLocationStrategy },
-    CommonService,
-    CommonAlertsService,
-    InterfacesService,
-    AuthGuard
+    InterfacesService
   ],
   bootstrap: [AppComponent]
 })

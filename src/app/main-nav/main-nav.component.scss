@@ -1,34 +1,16 @@
 @import "../app.component.scss";
 @import '../../assets/styles/variable.scss';
-.body{
-	font-family: 'Gothic A1', sans-serif;
-	font-size:16px;
-	}
-	p{
-	color:#6c6c6f;
-	font-size:1em;
-	}
-	h1,h2,h3,h4,h5,h6{color:#323233;text-transform:uppercase;}
-.navbar-brand  span{
-	font-size:25px;font-weight:700;letter-spacing:0.1em;
-    font-family: 'Kaushan Script','Helvetica Neue',Helvetica,Arial,cursive;
-}
+
+
 .navbar {
   background-color: #000;
     box-shadow: 0 0px 0px 0 rgba(0, 0, 0, 0), 0 0px 10px 0 rgba(0, 0, 0, 0);
     font-weight: 300;
 }
-.navbar-brand {
-	color: #fff;
-	font-size:25px;
-    font-family: 'Kaushan Script','Helvetica Neue',Helvetica,Arial,cursive;
-	font-weight:700;
-	letter-spacing:0.1em;
-}
 
 .navbar-nav .nav-item .nav-link{
 	padding: 1.1em 1em!important;
-	font-size: 95%;
+	font-size: 90%;
     font-weight: 500;
     letter-spacing: 1px;
     color: #fff;

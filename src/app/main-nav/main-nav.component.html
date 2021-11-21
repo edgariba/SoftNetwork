@@ -39,39 +39,46 @@
 </mat-sidenav-container>
  -->
 
- <nav class="navbar navbar-expand-md navbar-dark fixed-top" id="banner">
+<nav class="navbar navbar-expand-md navbar-dark fixed-top" id="banner">
   <div class="container">
-  <!-- Brand -->
-  <a class="navbar-brand" href="#"><span><img src="./assets/img/logo/logo_blanco.png" class="logoBlanco"></span></a>
+    <!-- Brand -->
+    <a class="navbar-brand" href="#"><span><img src="./assets/img/logo/logo_blanco.png" class="logoBlanco"></span></a>
 
-  <!-- Toggler/collapsibe Button -->
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
-    <span class="navbar-toggler-icon"></span>
-  </button>
+    <!-- Toggler/collapsibe Button -->
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+      <span class="navbar-toggler-icon"></span>
+    </button>
 
-  <!-- Navbar links -->
-  <div class="collapse navbar-collapse" id="collapsibleNavbar">
-    <ul class="navbar-nav ml-auto" >
-      <li class="nav-item" id="inicio">
-        <a class="nav-link" [routerLink]="['/']" [routerLinkActive]="['link_active']">INICIO</a>
-      </li>
-      <li class="nav-item" id="nosotros">
-        <a class="nav-link" [routerLink]="['/nosotros']" [routerLinkActive]="['link_active']">NOSOTROS</a>
-      </li>
-      <li class="nav-item" id="servicios">
-        <a class="nav-link" [routerLink]="['/servicios']" [routerLinkActive]="['link_active']">SERVICIOS</a>
-      </li> 
-      <li class="nav-item" id="portafolio">
-        <a class="nav-link" [routerLink]="['/portafolio']" [routerLinkActive]="['link_active']">PORTAFOLIO</a>
-      </li> 
-      <li class="nav-item" id="contacto">
-          <a class="nav-link" [routerLink]="['/contacto']" [routerLinkActive]="['link_active']">CONTACTO</a>
-        </li> 
-      <li class="nav-item">
-        <a href="https://www.softcrud.com/" target="_blank" class="tile socialmedia"><i class="fa fa-facebook"></i></a>
-        <a href="https://www.softcrud.com/" target="_blank" class="tile socialmedia"><i class="fa fa-instagram"></i></a>        
-      </li>
-    </ul>
-  </div>  
+    <!-- Navbar links -->
+    <div class="collapse navbar-collapse" id="collapsibleNavbar">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item" id="inicio">
+          <a class="nav-link" #home [routerLinkActive]="['link_active']" [routerLink]="['/']"
+            [routerLinkActiveOptions]="{exact: true}">INICIO</a>
+        </li>
+        <li class="nav-item" id="nosotros">
+          <a class="nav-link" [routerLinkActive]="['link_active']" [routerLink]="['/nosotros']"
+            [routerLinkActiveOptions]="{exact: true}">NOSOTROS</a>
+        </li>
+        <li class="nav-item" id="servicios">
+          <a class="nav-link" [routerLinkActive]="['link_active']" [routerLink]="['/servicios']"
+            [routerLinkActiveOptions]="{exact: true}">SERVICIOS</a>
+        </li>
+        <li class="nav-item" id="portafolio">
+          <a class="nav-link" [routerLinkActive]="['link_active']" [routerLink]="['/portafolio']"
+            [routerLinkActiveOptions]="{exact: true}">PORTAFOLIO</a>
+        </li>
+        <li class="nav-item" id="contacto">
+          <a class="nav-link" [routerLinkActive]="['link_active']" [routerLink]="['/contacto']"
+            [routerLinkActiveOptions]="{exact: true}">CONTACTO</a>
+        </li>
+        <li class="nav-item">
+          <a href="https://www.softcrud.com/" target="_blank" class="tile socialmedia"><i
+              class="fa fa-facebook"></i></a>
+          <a href="https://www.softcrud.com/" target="_blank" class="tile socialmedia"><i
+              class="fa fa-instagram"></i></a>
+        </li>
+      </ul>
+    </div>
   </div>
 </nav>

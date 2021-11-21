@@ -61,6 +61,6 @@ export class SpinnerComponent implements OnDestroy {
     var that = this
     setTimeout(function(){
       that.isSpinnerVisible = false;
-    },0);
+    },500);
   }
 }

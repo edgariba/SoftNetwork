@@ -37,6 +37,7 @@
               "src/styles.scss",
               "node_modules/bootstrap/dist/css/bootstrap.min.css", 
               "node_modules/font-awesome/scss/font-awesome.scss",
+              "node_modules/animate.css/animate.min.css",
               "src/assets/styles/style.scss"
             ],
             "scripts": [

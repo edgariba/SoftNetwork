@@ -41,7 +41,7 @@ import { ContactoComponent } from './views/contacto/contacto.component';
     DemoMaterialModule
   ],
   providers: [
-    { provide: LocationStrategy, useClass: HashLocationStrategy },
+    /* { provide: LocationStrategy, useClass: HashLocationStrategy }, */
     InterfacesService
   ],
   bootstrap: [AppComponent]

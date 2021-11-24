@@ -2,6 +2,7 @@ import { Component, ElementRef, OnDestroy, OnInit, ViewChild } from '@angular/co
 import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 import { Observable } from 'rxjs';
 import { map, shareReplay } from 'rxjs/operators';
+declare var particlesJS: any;
 
 @Component({
   selector: 'app-home',
@@ -18,6 +19,9 @@ export class HomeComponent implements OnInit, OnDestroy {
   constructor() { }
 
   ngOnInit(): void {
+    particlesJS.load('particles-js', 'assets/particles.json', function() {
+      //console.log('callback - particles.js config loaded');
+    });
     var that = this
     this.timer = setInterval(() => {
       this.indice++

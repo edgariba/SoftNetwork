@@ -2,9 +2,11 @@
 @import '../../assets/styles/variable.scss';
 
 
-.navbar {
-  background-color: #000;
-    box-shadow: 0 0px 0px 0 rgba(0, 0, 0, 0), 0 0px 10px 0 rgba(0, 0, 0, 0);
+.nav_color{
+	background: rgb(255,255,255) !important;
+	background: linear-gradient(90deg, rgba(255,255,255,1) 24%, rgba(24,114,182,1) 57%, rgba(29,153,214,1) 100%) !important;
+}
+.navbar {      
     font-weight: 300;
 }
 
@@ -13,21 +15,23 @@
 	font-size: 90%;
     font-weight: 500;
     letter-spacing: 1px;
-    color: #fff;
-   font-family: 'Gothic A1', sans-serif;
-   font-weight: bold;
+    color: #ffffffb8;
+   font-family: 'Gothic A1', sans-serif;   
 }
 
 .link_active{
 	color: $nav_active !important;
+	font-weight: bold !important;
 	background-color:#0000ff00 !important;    
 }
 
+
 .navbar-nav .nav-item .nav-link:hover{
 	color:$nav_hover;
+	font-weight: bold !important;	
 }
 .navbar-expand-md .navbar-nav .dropdown-menu{
-	border-top:3px solid #fed136;
+	border-top:3px solid $color_logo_1;
 }
 .dropdown-item:hover{background-color:#fed136;color:#fff;}
 nav{-webkit-transition: padding-top .3s,padding-bottom .3s;
@@ -43,7 +47,7 @@ nav{-webkit-transition: padding-top .3s,padding-bottom .3s;
 }
 
 .logoBlanco{
-	width: 180px;
+	width: 220px;
 	display: block;
 }
 
@@ -55,9 +59,13 @@ nav{-webkit-transition: padding-top .3s,padding-bottom .3s;
 /* mobile view */
 @media (max-width:500px)
 {
+	.nav_color{
+		background: rgb(255,255,255) !important;
+		background: linear-gradient(90deg, rgba(255,255,255,1) 24%, rgb(255, 255, 255) 57%, rgb(255, 255, 255) 100%) !important;
+	}
 	.navbar-nav{
 		background-color:#000;
-		border-top:3px solid #fed136;
+		border-top:3px solid $color_logo_1;
 		color:#fff;
 		z-index:1;
 		margin-top:5px;

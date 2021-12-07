@@ -1,5 +1,5 @@
 import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
-
+declare var $: any
 @Component({
   selector: 'app-main-nav',
   templateUrl: './main-nav.component.html',
@@ -10,7 +10,22 @@ export class MainNavComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    
+    $('#logoColor').css('display','none');
+    $(document).on("scroll", function () {
+      
+      if($(document).scrollTop() > 30) {
+        $("#banner").addClass("nav_color");
+        $('#logoBlanco').css('display','none');
+        $('#logoColor').css('display','block');
+      }
+      else {
+        $("#banner").removeClass("nav_color");
+        $('#logoBlanco').css('display','block');
+        $('#logoColor').css('display','none');
+      }
+    });
+
+
   }
 
   removeClass() {

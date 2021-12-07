@@ -68,7 +68,7 @@
     margin-top: 5%;
     font-weight: 700;
     letter-spacing: 0.3rem;
-    color: $color_primary;
+    color: $color_logo_3;
 }
 
 .txt-servicios{
@@ -142,7 +142,7 @@
   }
   
   .solution_card .solu_title h3 {
-    color: $color_primary;
+    color: $color_logo_1;
     font-size: 1.3rem;
     margin-top: 13px;
     margin-bottom: 13px;
@@ -337,8 +337,8 @@
 
 
 .titl-h5 {
-    border-top: 2px solid $color_primary;
-    border-bottom: 2px solid $color_primary;
+    border-top: 2px solid $color_logo_1;
+    border-bottom: 2px solid $color_logo_1;
     /* padding: 10px; */
     margin-top: -20px;    
     line-height: 20px;
@@ -378,7 +378,7 @@
 .more-button{
   border: 0;
     border-radius: 15px;
-    background: linear-gradient(140deg, #42c3ca 0%, #42c3ca 50%, #42c3cac7 75%) !important;
+    background: linear-gradient(140deg, $color_logo_1 0%, $color_logo_1 50%, $color_logo_1 75%) !important;
     color: #fff;
     font-weight: 500;
     font-size: 1rem;
@@ -387,7 +387,7 @@
 
 .more-button:hover{
 
-    background: linear-gradient(140deg, $color_primary 0%, $color_primary 50%, $color_primary_degrad 75%) !important;
+    background: linear-gradient(140deg, $color_logo_1 0%, $color_logo_2 50%, $color_logo_3 75%) !important;
 }
   /* segundos card */
 
@@ -431,3 +431,19 @@
 .carousel-inner .carousel-item-left{ 
   transform: translateX(0);
 }
+
+
+
+/* timeline */
+
+
+/* timeline */
+.div-botton[_ngcontent-c5] {
+  position: static;
+  bottom: 0;
+  left: 0;
+  border-width: 0 98vw 25vh 0;
+  border-style: solid;
+  border-color: #000000 #000000 #ffffff transparent;
+}
+

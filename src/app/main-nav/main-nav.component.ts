@@ -27,6 +27,7 @@ export class MainNavComponent implements OnInit {
 
 
   }
+  
 
   removeClass() {
     //this.homeData.nativeElement.classList.remove('link_active')

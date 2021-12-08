@@ -19,6 +19,7 @@ import { ServiciosComponent } from './views/servicios/servicios.component';
 import { PortafolioComponent } from './views/portafolio/portafolio.component';
 import { ContactoComponent } from './views/contacto/contacto.component';
 import { CountersComponent } from './views/homeViews/counters/counters.component';
+import { ServicesPrincipalesComponent } from './views/homeViews/services-principales/services-principales.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import { CountersComponent } from './views/homeViews/counters/counters.component
     ServiciosComponent,
     PortafolioComponent,
     ContactoComponent,
-    CountersComponent
+    CountersComponent,
+    ServicesPrincipalesComponent
   ],
   imports: [
     BrowserModule,

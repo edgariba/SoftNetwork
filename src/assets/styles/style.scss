@@ -19,3 +19,28 @@
     color: $color_logo_3;
 }
 
+.separator.small {
+    background-color: rgb(136, 136, 136);
+    height: 3px;
+    position: relative;
+    width: 200px;
+    display: block;
+    margin: 10px auto 20px;
+  }
+
+  
+
+.txt-especialista{
+    position: relative;
+    display: block;
+    text-transform: uppercase;
+    margin-bottom: 5%;
+    margin-top: 5%;
+    font-weight: 700;
+    letter-spacing: 0.3rem;
+    color: $color_logo_3;
+}
+
+.txt-servicios{
+  color: white !important;
+}

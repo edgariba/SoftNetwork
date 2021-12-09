@@ -28,10 +28,19 @@
           <a class="nav-link" [routerLinkActive]="['link_active']" [routerLink]="['/nosotros']"
             [routerLinkActiveOptions]="{exact: true}">NOSOTROS</a>
         </li>
-        <li class="nav-item" id="servicios">
-          <a class="nav-link" [routerLinkActive]="['link_active']" [routerLink]="['/servicios']"
-            [routerLinkActiveOptions]="{exact: true}">SERVICIOS</a>
+       
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" id="navbarDropdown1" role="button" data-toggle="dropdown" [routerLinkActive]="['link_active']" [routerLink]="['/soluciones']"  aria-haspopup="true" aria-expanded="false">
+            SOLUCIONES
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown1">
+            <a class="dropdown-item" [routerLinkActive]="['link_active']" [routerLink]="['/soluciones/desarrollo']"
+            [routerLinkActiveOptions]="{exact: true}">Desarrollo de software</a>
+            <a class="dropdown-item" [routerLinkActive]="['link_active']" [routerLink]="['/soluciones/telecomunicaciones']"
+            [routerLinkActiveOptions]="{exact: true}">Telecomunicaciones</a>            
+          </div>
         </li>
+
         <li class="nav-item" id="portafolio">
           <a class="nav-link" [routerLinkActive]="['link_active']" [routerLink]="['/portafolio']"
             [routerLinkActiveOptions]="{exact: true}">PORTAFOLIO</a>

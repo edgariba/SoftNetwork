@@ -1,4 +1,3 @@
-import { LocationStrategy, HashLocationStrategy } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
@@ -9,17 +8,18 @@ import { AppRoutes } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { InterfacesService } from './classes/interfaces';
 import { DemoMaterialModule } from './demo-material.module';
+import { FooterComponent } from './footer/footer.component';
 import { FullComponent } from './layouts/full.component';
 import { MainNavComponent } from './main-nav/main-nav.component';
 import { SpinnerComponent } from './shared/spinner.component';
-import { FooterComponent } from './footer/footer.component';
-import { HomeComponent } from './views/home/home.component';
-import { NosotrosComponent } from './views/nosotros/nosotros.component';
-import { ServiciosComponent } from './views/servicios/servicios.component';
-import { PortafolioComponent } from './views/portafolio/portafolio.component';
 import { ContactoComponent } from './views/contacto/contacto.component';
+import { DesarrolloComponent } from './views/desarrollo/desarrollo.component';
+import { HomeComponent } from './views/home/home.component';
 import { CountersComponent } from './views/homeViews/counters/counters.component';
 import { ServicesPrincipalesComponent } from './views/homeViews/services-principales/services-principales.component';
+import { NosotrosComponent } from './views/nosotros/nosotros.component';
+import { PortafolioComponent } from './views/portafolio/portafolio.component';
+import { TelecomunicacionesComponent } from './views/telecomunicaciones/telecomunicaciones.component';
 
 @NgModule({
   declarations: [
@@ -30,16 +30,17 @@ import { ServicesPrincipalesComponent } from './views/homeViews/services-princip
     FooterComponent,
     HomeComponent,
     NosotrosComponent,
-    ServiciosComponent,
     PortafolioComponent,
     ContactoComponent,
     CountersComponent,
-    ServicesPrincipalesComponent
+    ServicesPrincipalesComponent,
+    TelecomunicacionesComponent,
+    DesarrolloComponent
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
-    RouterModule.forRoot(AppRoutes, { scrollPositionRestoration: 'enabled' }),
+    RouterModule.forRoot(AppRoutes, { useHash: true, scrollPositionRestoration: 'enabled' }),
     FormsModule,
     BrowserAnimationsModule,
     DemoMaterialModule

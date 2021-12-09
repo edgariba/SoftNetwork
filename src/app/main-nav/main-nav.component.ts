@@ -10,24 +10,49 @@ export class MainNavComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    $('#logoColor').css('display','none');
+    $('#logoColor').css('display', 'none');
     $(document).on("scroll", function () {
-      
-      if($(document).scrollTop() > 30) {
+
+      if ($(document).scrollTop() > 30) {
         $("#banner").addClass("nav_color");
-        $('#logoBlanco').css('display','none');
-        $('#logoColor').css('display','block');
+        $('#logoBlanco').css('display', 'none');
+        $('#logoColor').css('display', 'block');
       }
       else {
         $("#banner").removeClass("nav_color");
-        $('#logoBlanco').css('display','block');
-        $('#logoColor').css('display','none');
+        $('#logoBlanco').css('display', 'block');
+        $('#logoColor').css('display', 'none');
       }
     });
 
+    const $dropdown = $(".dropdown");
+    const $dropdownToggle = $(".dropdown-toggle");
+    const $dropdownMenu = $(".dropdown-menu");
+    const showClass = "show";
+
+    $(window).on("load resize", function () {
+      if (this.matchMedia("(min-width: 768px)").matches) {
+        $dropdown.hover(
+          function () {
+            const $this = $(this);
+            $this.addClass(showClass);
+            $this.find($dropdownToggle).attr("aria-expanded", "true");
+            $this.find($dropdownMenu).addClass(showClass);
+          },
+          function () {
+            const $this = $(this);
+            $this.removeClass(showClass);
+            $this.find($dropdownToggle).attr("aria-expanded", "false");
+            $this.find($dropdownMenu).removeClass(showClass);
+          }
+        );
+      } else {
+        $dropdown.off("mouseenter mouseleave");
+      }
+    });
 
   }
-  
+
 
   removeClass() {
     //this.homeData.nativeElement.classList.remove('link_active')

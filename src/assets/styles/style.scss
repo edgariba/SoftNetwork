@@ -72,12 +72,27 @@ header .overlay{
 .header_tittle {
 	font-family: 'Dancing Script', cursive;
 	font-size: 80px;
+	padding-top: 2%;
 	margin-bottom: 30px;
 }
 
-.header_tittle .texto_header {
+.texto_header {
 	font-family: 'Open Sans', sans-serif;
 	margin-bottom: 30px;
 }
 
 /* header data */
+
+
+/* mobile view */
+@media (max-width:500px)
+{
+	.header_tittle {
+		font-size: 50px;
+		padding-top: 30%;
+	}
+
+	header{
+		height: 100vh;
+	}
+}

@@ -39,7 +39,7 @@ import { ServicesPrincipalesComponent } from './views/homeViews/services-princip
   imports: [
     BrowserModule,
     HttpClientModule,
-    RouterModule.forRoot(AppRoutes),
+    RouterModule.forRoot(AppRoutes, { scrollPositionRestoration: 'enabled' }),
     FormsModule,
     BrowserAnimationsModule,
     DemoMaterialModule

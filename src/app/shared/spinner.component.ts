@@ -21,7 +21,7 @@ import { DOCUMENT } from '@angular/common';
           <div class="double-bounce1"></div>
           <div class="double-bounce2"></div>
         </div>
-        <img style="text-align: center !important; padding-top: 45px; max-width: 15rem;"  src="./assets/img/logo/logo_tecmi.png" id="logo" class="light-logo img-fluid ">
+        <img style="text-align: center !important; padding-top: 45px; max-width: 18rem;"  src="./assets/img/logo/logo_tecmi.png" id="logo" class="light-logo img-fluid ">
     </div>`,
   encapsulation: ViewEncapsulation.None
 })
@@ -39,6 +39,7 @@ export class SpinnerComponent implements OnDestroy {
       event => {
         if (event instanceof NavigationStart) {
           this.isSpinnerVisible = true;
+          document.body.style.overflow = 'hidden';
         } else if (
           event instanceof NavigationEnd ||
           event instanceof NavigationCancel ||
@@ -61,6 +62,7 @@ export class SpinnerComponent implements OnDestroy {
     var that = this
     setTimeout(function(){
       that.isSpinnerVisible = false;
+      document.body.style.overflow = 'scroll';
     },500);
   }
 }

@@ -1,17 +1,8 @@
-@import '../../../assets/styles/variable.scss';
 .txt_header{
 	padding-top: 6%;
 	padding-bottom: 6%;
 }
-.main-timeline{
-    font-family: 'Roboto', sans-serif;
-    position: relative;
-}
-.main-timeline:after{
-    content: '';
-    display: block;
-    clear: both;
-}
+
 .main-timeline:before{
     content: '';
     height: 95%;
@@ -37,7 +28,6 @@
     display: block;
     position: relative;
 }
-.main-timeline .timeline-content:hover{ text-decoration: none; }
 .main-timeline .timeline-content:before,
 .main-timeline .timeline-content:after{
     content: "";
@@ -131,17 +121,17 @@
     left: -33px;
 }
 .main-timeline .timeline:nth-child(4n+2) .timeline-content:before,
-.main-timeline .timeline:nth-child(4n+2) .timeline-icon {background:linear-gradient(to left,$color_logo_2,$color_logo_3);}
-.main-timeline .timeline:nth-child(4n+2) .timeline-year {background:linear-gradient(to bottom,$color_logo_2,$color_logo_2,$color_logo_3);}
-.main-timeline .timeline:nth-child(4n+2) .timeline-year:after{background:linear-gradient(to right bottom, $color_logo_2 49%, transparent 50%);}
+.main-timeline .timeline:nth-child(4n+2) .timeline-icon {background:linear-gradient(to left,#1872b6,#273d7a);}
+.main-timeline .timeline:nth-child(4n+2) .timeline-year {background:linear-gradient(to bottom,#1872b6,#1872b6,#273d7a);}
+.main-timeline .timeline:nth-child(4n+2) .timeline-year:after{background:linear-gradient(to right bottom, #1872b6 49%, transparent 50%);}
 .main-timeline .timeline:nth-child(4n+3) .timeline-content:before,
 .main-timeline .timeline:nth-child(4n+3) .timeline-icon {background:linear-gradient(to bottom,#227e22 ,#63a211);}
 .main-timeline .timeline:nth-child(4n+3) .timeline-year {background:linear-gradient(to bottom,#227e22,#227e22,#63a211);}
 .main-timeline .timeline:nth-child(4n+3) .timeline-year:after{background:linear-gradient(to right bottom, #227e22 49%, transparent 50%);}
 .main-timeline .timeline:nth-child(4n+4) .timeline-content:before,
-.main-timeline .timeline:nth-child(4n+4) .timeline-icon {background:linear-gradient(to left,$color_logo_1 ,$color_logo_1);}
-.main-timeline .timeline:nth-child(4n+4) .timeline-year {background:linear-gradient(to bottom,$color_logo_1,$color_logo_1,$color_logo_2);}
-.main-timeline .timeline:nth-child(4n+4) .timeline-year:after{background:linear-gradient(to right bottom, $color_logo_1 49%, transparent 50%);}
+.main-timeline .timeline:nth-child(4n+4) .timeline-icon {background:linear-gradient(to left,#1d99d6 ,#1d99d6);}
+.main-timeline .timeline:nth-child(4n+4) .timeline-year {background:linear-gradient(to bottom,#1d99d6,#1d99d6,#1872b6);}
+.main-timeline .timeline:nth-child(4n+4) .timeline-year:after{background:linear-gradient(to right bottom, #1d99d6 49%, transparent 50%);}
 @media screen and (max-width:767px){
     .main-timeline:before{
         left: 17px;

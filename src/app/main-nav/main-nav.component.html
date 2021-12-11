@@ -9,7 +9,7 @@
       <span class="navbar-toggler-icon"></span>
     </button> -->
 
-    <label class="menu navbar-toggler" data-toggle="collapse" data-target="#collapsibleNavbar">
+    <label class="menu navbar-toggler" data-toggle="collapse" data-target="#collapsibleNavbar" id="menus">
       <input type="checkbox" checked>
       <div>
           <span></span>
@@ -30,7 +30,7 @@
         </li>
        
         <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" id="navbarDropdown1" role="button" data-toggle="dropdown"  aria-haspopup="true" aria-expanded="false">
+          <a class="nav-link dropdown-toggle" id="navbarDropdown1" role="button" data-toggle="dropdown"  aria-haspopup="true" aria-expanded="false" [class.link_active]="getCurrentRoute()">
             SOLUCIONES
           </a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdown1">

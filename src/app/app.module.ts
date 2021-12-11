@@ -40,7 +40,7 @@ import { TelecomunicacionesComponent } from './views/telecomunicaciones/telecomu
   imports: [
     BrowserModule,
     HttpClientModule,
-    RouterModule.forRoot(AppRoutes, { useHash: true, scrollPositionRestoration: 'enabled' }),
+    RouterModule.forRoot(AppRoutes, { useHash: false, scrollPositionRestoration: 'enabled' }),
     FormsModule,
     BrowserAnimationsModule,
     DemoMaterialModule

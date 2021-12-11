@@ -1,4 +1,5 @@
 import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+import { Router } from '@angular/router';
 declare var $: any
 @Component({
   selector: 'app-main-nav',
@@ -7,7 +8,7 @@ declare var $: any
 })
 export class MainNavComponent implements OnInit {
   @ViewChild('home', { read: ElementRef, static: false }) homeData: ElementRef;
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit() {
     $('#logoColor').css('display', 'none');
@@ -53,9 +54,21 @@ export class MainNavComponent implements OnInit {
 
   }
 
+  closeMenu() {
+    document.getElementById('menus').click();
+  }
 
   removeClass() {
     //this.homeData.nativeElement.classList.remove('link_active')
+  }
+
+  getCurrentRoute(){    
+    var ruta = this.router.url
+    if(ruta.startsWith('/soluciones')){
+      return true
+    } else{
+      return false
+    }
   }
 
   addClassActive() {

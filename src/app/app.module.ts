@@ -1,3 +1,4 @@
+import { HashLocationStrategy, LocationStrategy, PathLocationStrategy } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
@@ -40,13 +41,17 @@ import { TelecomunicacionesComponent } from './views/telecomunicaciones/telecomu
   imports: [
     BrowserModule,
     HttpClientModule,
-    RouterModule.forRoot(AppRoutes, { useHash: false, scrollPositionRestoration: 'enabled' }),
+    RouterModule.forRoot(AppRoutes, { useHash: true, scrollPositionRestoration: 'enabled' }),
     FormsModule,
     BrowserAnimationsModule,
     DemoMaterialModule
   ],
   providers: [
-    /* { provide: LocationStrategy, useClass: HashLocationStrategy }, */
+    { provide: LocationStrategy, useClass: HashLocationStrategy },
+   /*  {
+      provide: LocationStrategy,
+      useClass: PathLocationStrategy
+   }, */
     InterfacesService
   ],
   bootstrap: [AppComponent]

@@ -1,52 +1,57 @@
 <nav class="navbar navbar-expand-md navbar-dark fixed-top" id="banner" #navbar>
   <div class="container">
     <!-- Brand -->
-    <a id="logoColor" class="navbar-brand" href="#"><span><img src="./assets/img/logo/logo_tecmi.png" class="logoBlanco animate__animated animate__zoomIn"></span></a>
-    <a id="logoBlanco" class="navbar-brand" href="#"><span><img src="./assets/img/logo/logo_blanco.png" class="logoBlanco animate__animated animate__lightSpeedInLeft"></span></a>
+    <a id="logoColor" class="navbar-brand" href="#"><span><img src="./assets/img/logo/logo_tecmi.png"
+          class="logoBlanco animate__animated animate__zoomIn"></span></a>
+    <a id="logoBlanco" class="navbar-brand" href="#"><span><img src="./assets/img/logo/logo_blanco.png"
+          class="logoBlanco animate__animated animate__lightSpeedInLeft"></span></a>
 
     <!-- Toggler/collapsibe Button -->
-<!--     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+    <!--     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
       <span class="navbar-toggler-icon"></span>
     </button> -->
 
     <label class="menu navbar-toggler" data-toggle="collapse" data-target="#collapsibleNavbar" id="menus">
       <input type="checkbox" checked>
       <div>
-          <span></span>
-          <span></span>
+        <span></span>
+        <span></span>
       </div>
-  </label>
+    </label>
 
     <!-- Navbar links -->
     <div class="collapse navbar-collapse" id="collapsibleNavbar">
       <ul class="navbar-nav ml-auto">
         <li class="nav-item" id="inicio">
-          <a class="nav-link" #home [routerLinkActive]="['link_active']" [routerLink]="['']"
+          <a class="nav-link" (click)="closeMenu()" #home [routerLinkActive]="['link_active']" [routerLink]="['']"
             [routerLinkActiveOptions]="{exact: true}">INICIO</a>
         </li>
         <li class="nav-item" id="nosotros">
-          <a class="nav-link" [routerLinkActive]="['link_active']" [routerLink]="['/nosotros']"
+          <a class="nav-link" (click)="closeMenu()" [routerLinkActive]="['link_active']" [routerLink]="['/nosotros']"
             [routerLinkActiveOptions]="{exact: true}">NOSOTROS</a>
         </li>
-       
+
         <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" id="navbarDropdown1" role="button" data-toggle="dropdown"  aria-haspopup="true" aria-expanded="false" [class.link_active]="getCurrentRoute()">
+          <a class="nav-link dropdown-toggle" id="navbarDropdown1" role="button" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false" [class.link_active]="getCurrentRoute()">
             SOLUCIONES
           </a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdown1">
-            <a class="dropdown-item" [routerLinkActive]="['link_active']" [routerLink]="['/soluciones/desarrollo']"
-            [routerLinkActiveOptions]="{exact: true}">Desarrollo de software</a>
-            <a class="dropdown-item" [routerLinkActive]="['link_active']" [routerLink]="['/soluciones/telecomunicaciones']"
-            [routerLinkActiveOptions]="{exact: true}">Redes y Telecomunicaciones</a>            
+            <a class="dropdown-item" (click)="closeMenu()" [routerLinkActive]="['link_active']"
+              [routerLink]="['/soluciones/desarrollo']" [routerLinkActiveOptions]="{exact: true}">Desarrollo de
+              software</a>
+            <a class="dropdown-item" (click)="closeMenu()" [routerLinkActive]="['link_active']"
+              [routerLink]="['/soluciones/telecomunicaciones']" [routerLinkActiveOptions]="{exact: true}">Redes y
+              Telecomunicaciones</a>
           </div>
         </li>
 
         <li class="nav-item" id="portafolio">
-          <a class="nav-link" [routerLinkActive]="['link_active']" [routerLink]="['/portafolio']"
+          <a class="nav-link" (click)="closeMenu()" [routerLinkActive]="['link_active']" [routerLink]="['/portafolio']"
             [routerLinkActiveOptions]="{exact: true}">PORTAFOLIO</a>
         </li>
         <li class="nav-item" id="contacto">
-          <a class="nav-link" [routerLinkActive]="['link_active']" [routerLink]="['/contacto']"
+          <a class="nav-link" (click)="closeMenu()" [routerLinkActive]="['link_active']" [routerLink]="['/contacto']"
             [routerLinkActiveOptions]="{exact: true}">CONTACTO</a>
         </li>
         <li class="nav-item">

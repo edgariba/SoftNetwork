@@ -7,7 +7,7 @@ declare var $: any
   styleUrls: ['./portafolio.component.scss']
 })
 export class PortafolioComponent implements OnInit {
-  @ViewChild("videoPlayer", { static: false }) videoplayer: ElementRef;
+
   portafolioDev: Portafolio[] = [
     { image: "./assets/img/portafolio/dev/LibupMx.JPG", subtitle: "", title: "Libup Web" },
     { image: "./assets/img/portafolio/dev/LibupMx.JPG", subtitle: "", title: "Libup Web" },
@@ -35,10 +35,9 @@ export class PortafolioComponent implements OnInit {
     this.playVideo()
   }
 
-  playVideo(){
-
+  playVideo() {
     let audioPlayer = <HTMLVideoElement>document.getElementById('background-video');
-    audioPlayer.play()
+    audioPlayer.muted = true
   }
 }
 

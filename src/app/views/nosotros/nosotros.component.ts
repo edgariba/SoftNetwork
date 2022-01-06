@@ -12,6 +12,12 @@ export class NosotrosComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    this.playVideo()
+  }
+
+  playVideo() {
+    let audioPlayer = <HTMLVideoElement>document.getElementById('background-video');
+    audioPlayer.muted = true
   }
 
 }

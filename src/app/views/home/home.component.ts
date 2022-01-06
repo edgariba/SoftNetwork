@@ -1,7 +1,4 @@
-import { Component, ElementRef, OnDestroy, OnInit, ViewChild } from '@angular/core';
-import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
-import { Observable } from 'rxjs';
-import { map, shareReplay } from 'rxjs/operators';
+import { Component, ElementRef, OnDestroy, OnInit, Renderer2, ViewChild } from '@angular/core';
 declare var particlesJS: any;
 
 @Component({
@@ -16,10 +13,12 @@ export class HomeComponent implements OnInit, OnDestroy {
   timer = null
   indice = 0
 
-  constructor() { }
+  constructor(private renderer: Renderer2) {
+    this.renderer.setStyle(document.body, 'background-color', 'white');
+  }
 
   ngOnInit(): void {
-    particlesJS.load('particles-js', 'assets/particles.json', function() {
+    particlesJS.load('particles-js', 'assets/particles.json', function () {
       //console.log('callback - particles.js config loaded');
     });
     var that = this
@@ -29,9 +28,9 @@ export class HomeComponent implements OnInit, OnDestroy {
         this.indice = 0
       }
       //that.imageInit.nativeElement.classList.remove('animate__animated');
-     /*  that.imageInit.nativeElement.classList.remove('animate__slideInUp');
-      that.imageInit.nativeElement.classList = 'animate__slideInUp';
-      that.imageInit.nativeElement.src = that.images[i]; */
+      /*  that.imageInit.nativeElement.classList.remove('animate__slideInUp');
+       that.imageInit.nativeElement.classList = 'animate__slideInUp';
+       that.imageInit.nativeElement.src = that.images[i]; */
     }, 3000);
   }
 

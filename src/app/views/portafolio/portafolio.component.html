@@ -1,6 +1,6 @@
 <header>
     <div class="overlay">
-        <video id="background-video" autoplay loop muted>
+        <video id="background-video"  #videoPlayer autoplay loop muted  >
             <source
                 src="https://player.vimeo.com/external/499594302.sd.mp4?s=2cf8beb30fbdad310b414cdf5e25323c6475fe77&profile_id=164"
                 type="video/mp4">
@@ -33,46 +33,88 @@
             <div class="tab-content py-3 px-3 px-sm-0" id="nav-tabContent">
                 <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
                     <div class="row">
-                        <div class="col-md-6 col-sm-12 botm-margn ">
-                            <div class="section-content">
-                                <div class="content-wrapper">
-                                    <div class="box box-1"
-                                        style="background-image: linear-gradient(rgba(0, 0, 0, 0.6),rgba(0, 0, 0, 0.2)), url(./assets/img/servicios/camaras.jpg);">
-                                        <div class="first">
-                                            <h2>Web development</h2>
-                                        </div>
-                                        <div class="second">
-                                            <p>lorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem
-                                                ipsumlorem ipsumlorem ipsum</p>
-                                            <p><a href="#">Find out more</a></p>
+                        <div class="col-md-6 col-sm-12 botm-margn " *ngFor="let item of portafolioDev">
+                            <div class="container_init">
+                                <div class="post">
+                                    <div class="header_post">
+                                        <img src="https://images.pexels.com/photos/2529973/pexels-photo-2529973.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" alt="">
+                                    </div>
+                            
+                                    <div class="body_post">
+                                        <div class="post_content">
+                            
+                                            <h1>Lorem Ipsum</h1>
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci animi assumenda cumque deserunt
+                                                dolorum ex exercitationem.</p>
+                            
+                                            <div class="container_infos">
+                                                <!-- <div class="postedBy">
+                                                    <span>author</span>
+                                                    Edgar Barrera
+                                                </div> -->
+                            
+                                                <div class="container_tags">
+                                                    <!-- <span>tags</span> -->
+                                                    <div class="tags">
+                                                        <ul>
+                                                            <li>design</li>
+                                                            <li>front end</li>
+                                                        </ul>
+                                                    </div>
+                            
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
+                            
                         </div>
-                        <div class="col-md-6 col-sm-12 botm-margn ">
-                            <div class="section-content">
-                                <div class="content-wrapper">
-                                    <div class="box box-1" >
-                                        <div class="first">
-                                            <h2>Web development</h2>
-                                        </div>
-                                        <div class="second">
-                                            <p>lorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem
-                                                ipsumlorem ipsumlorem ipsum</p>
-                                            <p><a href="#">Find out more</a></p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
 
                     </div>
 
                 </div>
                 <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
+                    <div class="row">
+                        <div class="col-md-6 col-sm-12 botm-margn " *ngFor="let item of portafolioDev">
+                            <div class="container_init">
+                                <div class="post">
+                                    <div class="header_post">
+                                        <img src="https://images.pexels.com/photos/2529973/pexels-photo-2529973.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" alt="">
+                                    </div>
+                            
+                                    <div class="body_post">
+                                        <div class="post_content">
+                            
+                                            <h1>Lorem Ipsum</h1>
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci animi assumenda cumque deserunt
+                                                dolorum ex exercitationem.</p>
+                            
+                                            <div class="container_infos">
+                                                <!-- <div class="postedBy">
+                                                    <span>author</span>
+                                                    Edgar Barrera
+                                                </div> -->
+                            
+                                                <div class="container_tags">
+                                                    <!-- <span>tags</span> -->
+                                                    <div class="tags">
+                                                        <ul>
+                                                            <li>design</li>
+                                                            <li>front end</li>
+                                                        </ul>
+                                                    </div>
+                            
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                        </div>
 
+                    </div>
                 </div>
 
             </div>
@@ -84,5 +126,5 @@
 
 
 </div>
-
+<div _ngcontent-c5="" class="div-botton"></div>
 <app-counters></app-counters>

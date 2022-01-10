@@ -1,6 +1,8 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Component, OnInit, Renderer2 } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
+import { ToastrManager } from 'ng6-toastr-notifications';
+import { NgxSpinnerService } from 'ngx-spinner';
 declare var $: any
 @Component({
   selector: 'app-contacto',
@@ -12,17 +14,10 @@ export class ContactoComponent implements OnInit {
 
   myForm: FormGroup;
   submitted = false;
-  lat: number = 20.585018;
-  lng: number = -100.367691;
-  latTas: number = 20.556506;
-  lngTas: number = -99.305987;
-  zoom: number = 16;
-
-  textoOk = 'El correo fue enviado correctamente.';
 
 
-  constructor(public fb: FormBuilder, private http: HttpClient, private renderer: Renderer2) {
-    
+  constructor(public fb: FormBuilder, private http: HttpClient, private renderer: Renderer2, private spinner: NgxSpinnerService, public toastr: ToastrManager) {
+
     this.renderer.setStyle(document.body, 'background-color', 'black');
     this.myForm = this.fb.group({
       name: ['', [Validators.required]],
@@ -33,22 +28,26 @@ export class ContactoComponent implements OnInit {
     });
   }
 
-  ngOnInit(): void {
-    
+  ngOnInit(): void {    
+    this.playVideo()
   }
 
-  // convenience getter for easy access to form fields
+  playVideo() {
+    let audioPlayer = <HTMLVideoElement>document.getElementById('background-video');
+    audioPlayer.muted = true
+  }
+
+  
   get f() {
     return this.myForm.controls;
   }
 
   saveData() {
     this.submitted = true;
-    // stop here if form is invalid
     if (this.myForm.invalid) {
       return;
     }
-    //this.spinnerService.show();
+    this.spinner.show()
     let httpHeaders = new HttpHeaders()
       .set('Content-Type', 'application/json').set('Access-Control-Allow-Origin', '*');
     let options = {
@@ -61,20 +60,20 @@ export class ContactoComponent implements OnInit {
     formData.append('telefono', this.myForm.value.mobile);
     formData.append('mensaje', this.myForm.value.message);
 
-    this.http.post<any>("https://www.softcrud.com/api/sendMail.php", formData).subscribe(
+    this.http.post<any>("https://www.tecmhi.mx/api/sendMail.php", formData).subscribe(
       (data: any) => {
-        //this.spinnerService.hide();
-        $('#myModalFullError').modal('show');
+        this.spinner.hide();
+        this.showError()
       },
       (err) => {
         var texto = err.error.text;
-        if (texto.startsWith("El")) {   
-          $('#myModalFull').modal('show');
+        if (texto.startsWith("El")) {
+          this.showSuccess()
           this.cleanData();
-          //this.spinnerService.hide();                  
-        } else if(texto.startsWith("Hubo")){
-          $('#myModalFullError').modal('show');
-          //this.spinnerService.hide();
+          this.spinner.hide()
+        } else if (texto.startsWith("Hubo")) {
+          this.showError()
+          this.spinner.hide()
         }
       });
   }
@@ -87,6 +86,14 @@ export class ContactoComponent implements OnInit {
     this.myForm.get('mobile').setValue('');
     this.myForm.get('subject').setValue('');
     this.myForm.get('message').setValue('');
+  }
+
+  showSuccess() {
+    this.toastr.successToastr('Se envio exitosamente el correo, en breve nos pondremos en contacto con usted.', 'Éxito!');
+  }
+
+  showError() {
+    this.toastr.errorToastr('Ocurrio un error al enviar el correo, intenta de nuevo.', 'Oops!');
   }
 
 }

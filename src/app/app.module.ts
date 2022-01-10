@@ -21,6 +21,8 @@ import { ServicesPrincipalesComponent } from './views/homeViews/services-princip
 import { NosotrosComponent } from './views/nosotros/nosotros.component';
 import { PortafolioComponent } from './views/portafolio/portafolio.component';
 import { TelecomunicacionesComponent } from './views/telecomunicaciones/telecomunicaciones.component';
+import { NgxSpinnerModule } from "ngx-spinner";
+import { ToastrModule } from 'ng6-toastr-notifications';
 
 @NgModule({
   declarations: [
@@ -45,7 +47,9 @@ import { TelecomunicacionesComponent } from './views/telecomunicaciones/telecomu
     FormsModule,
     ReactiveFormsModule,
     BrowserAnimationsModule,
-    DemoMaterialModule
+    DemoMaterialModule,
+    NgxSpinnerModule,
+    ToastrModule.forRoot()
   ],
   providers: [
     { provide: LocationStrategy, useClass: HashLocationStrategy },

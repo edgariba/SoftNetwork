@@ -4,3 +4,175 @@
 	padding-top: 6%;
 	padding-bottom: 6%;
 }
+
+.atencion{
+	color: white;
+}
+
+.separador_atencion{
+	border-width: 10px;   
+    border-color: $color_logo_4;
+	border-style: ridge;
+}
+
+.contacto {
+    background: #000000;
+    /* background-image: linear-gradient(35deg, #0f0f3c, #19e0ff); */
+    padding-top: 100px;    
+    padding-bottom: 100px;    
+}
+
+.hablemos {
+    font-size: 4vh;
+    color: white;
+    font-weight: bold;
+}
+
+@media only screen and (max-width: 480px) {
+    .hablemos {
+        font-size: 2.5vh;
+        text-align: center;
+    }
+    .col-responsive {
+        text-align: center;
+    }
+    .responsive-div {
+        margin-bottom: 15px;
+    }
+}
+
+.questions {
+    font-size: 2vh;
+    color: white;
+}
+
+.form-control {    
+    font-weight: 400;
+}
+
+.custom-select.is-invalid,
+.form-control.is-invalid,
+.was-validated .custom-select:invalid,
+.was-validated .form-control:invalid {
+    border-color: rgb(231, 94, 94) !important;
+    border-width: 3px !important;
+}
+
+.invalid-feedback {
+    font-size: small !important;
+    color: rgb(231, 94, 94) !important;
+}
+
+ul.socialIcons {
+    padding: 0;
+    text-align: center;
+}
+
+.socialIcons li {
+    background: yellow;
+    list-style: none;
+    display: inline-block;
+    margin: 15px;
+    margin-top: 1%;
+    border-radius: 2em;
+    overflow: hidden;
+}
+
+.socialIcons li a {
+    display: block;
+    padding: .5em;
+    max-width: 2.3em;
+    min-width: 2.3em;
+    height: 2.3em;
+    white-space: nowrap;
+    line-height: 1.5em;
+    transition: .5s;
+    text-decoration: none;
+    font-family: arial;
+    color: #fff;
+}
+
+.socialIcons li i {
+    margin-right: .5em;
+}
+
+.socialIcons li:hover a {
+    max-width: 200px;
+    padding-right: 1em;
+}
+
+.socialIcons .facebook {
+    background: #3b5998;
+    box-shadow: 0 0 16px #3b5998;
+}
+
+.socialIcons .twitter {
+    background: #00aced;
+    box-shadow: 0 0 16px #00aced;
+}
+
+.socialIcons .pinterest {
+    background: #c97322;
+    box-shadow: 0 0 16px #a37e05;
+}
+
+.socialIcons .steam {
+    background: #007bb7;
+    box-shadow: 0 0 16px #007bb7;
+}
+
+.socialIcons .whatsApp {
+    background: #0ff53d;
+    box-shadow: 0 0 16px #c2d64f;
+}
+
+.modal-full {
+    min-width: 100%;
+    margin: 0;
+}
+
+.modal-full .modal-content {
+    min-height: 100vh;
+}
+
+.digit {
+    opacity: 0;
+    -webkit-transform: scale(0.9);
+    -moz-transform: scale(0.9);
+    -ms-transform: scale(0.9);
+    -o-transform: scale(0.9);
+    transform: scale(0.9);
+    -webkit-transition: all 1s ease-in-out;
+    -moz-transition: all 1s ease-in-out;
+    -ms-transition: all 1s ease-in-out;
+    -o-transition: all 1s ease-in-out;
+    transition: all 1s ease-in-out;
+}
+
+.digit.visible {
+    opacity: 1;
+    -webkit-transform: none;
+    -moz-transform: none;
+    -ms-transform: none;
+    -o-transform: none;
+    transform: none;
+}
+
+.blue-cube {
+    background-color: rgba(55, 119, 216, 0.562);
+    margin: 0 auto;
+    display: block;
+    padding: 40px 0;
+    text-align: center;
+    color: #fff;
+    font-size: 40px;
+    font-weight: bold;
+    opacity: 0;
+    transition: 1s;
+    width: 0%;
+}
+
+.blue-cube.show {
+    opacity: 1;
+    width: 100%;
+}

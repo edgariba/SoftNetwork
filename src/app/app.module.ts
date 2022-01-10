@@ -1,7 +1,7 @@
 import { HashLocationStrategy, LocationStrategy, PathLocationStrategy } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RouterModule } from '@angular/router';
@@ -43,6 +43,7 @@ import { TelecomunicacionesComponent } from './views/telecomunicaciones/telecomu
     HttpClientModule,
     RouterModule.forRoot(AppRoutes, { useHash: true, scrollPositionRestoration: 'enabled' }),
     FormsModule,
+    ReactiveFormsModule,
     BrowserAnimationsModule,
     DemoMaterialModule
   ],

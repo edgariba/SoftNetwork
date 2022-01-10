@@ -1,7 +1,6 @@
-
 <header>
     <div class="overlay">
-        <video id="background-video" muted autoplay loop   >
+        <video id="background-video" muted autoplay loop>
             <source
                 src="https://player.vimeo.com/external/499594302.sd.mp4?s=2cf8beb30fbdad310b414cdf5e25323c6475fe77&profile_id=164"
                 type="video/mp4">
@@ -17,3 +16,165 @@
             </p>
         </div>
     </div>
+</header>
+<div class="container-fluid contacto" id="contacto">
+    <div class="row">
+        <div class="col-12 col-md-5 responsive-div" style="text-align: center">
+            <span class="hablemos">LISTOS PARA TU PROYECTO!</span>
+            <br>
+            <br>
+            <br>
+            <div class="container">
+                <div class="separador_atencion" >
+                    <p class="atencion">Atención personal: Ing. Edgar Ivan Barrera Guerrero</p>
+                    <ul class="socialIcons">
+                        <li class="whatsApp"><a
+                                href="https://wa.me/527721486864?text=Deseo%20mas%20información%20gracias%20"
+                                target="_blank"><i class="fa fa-fw fa-whatsapp"></i>WhatsApp</a></li>
+                        <li class="facebook"><a href="mailto:contacto@tecmhi.mx?Subject=Información Tecmhi"
+                                target="_blank"><i class="fa fa-fw fa-envelope"></i>contacto@tecmhi.mx</a></li>                        
+                        <li class="pinterest"><a href="tel:+527721486864" class="icoPhone"><i
+                                    class="fa fa-fw fa-phone"></i>7721486864</a></li>
+                    </ul>
+
+                </div>
+<br>
+                <div class="separador_atencion">
+                    <p class="atencion">Atención personal: Ing. Cristian Hernandez Aguilar</p>
+                    <ul class="socialIcons">
+                        <li class="whatsApp"><a
+                                href="https://wa.me/524471037631?text=Deseo%20mas%20información%20gracias%20"
+                                target="_blank"><i class="fa fa-fw fa-whatsapp"></i>WhatsApp</a></li>
+                        <li class="facebook"><a href="mailto:contacto@tecmhi.mx?Subject=Información Tecmhi"
+                                target="_blank"><i class="fa fa-fw fa-envelope"></i>contacto@tecmhi.mx</a></li>                        
+                        <li class="pinterest"><a href="tel:+524471037631" class="icoPhone"><i
+                                    class="fa fa-fw fa-phone"></i>4471037631</a></li>
+                    </ul>
+
+                </div>
+            </div>
+        </div>
+        <div class="col-1"></div>
+        <div class="col-md-5 col-10 col-responsive">
+            <form [formGroup]="myForm" name="form" (ngSubmit)="saveData()" novalidate>
+                <div class="form-group form-contact">
+                    <input type="text" formControlName="name" class="form-control" placeholder="Introduce tu nombre"
+                        [ngClass]="{ 'is-invalid': submitted && f.name.errors }" />
+                    <div *ngIf="submitted && f.name.errors" class="invalid-feedback">
+                        <div *ngIf="f.name.errors.required">Por favor dinos tu nombre</div>
+                    </div>
+                </div>
+                <div class="form-group form-contact">
+                    <input type="email" class="form-control" formControlName="email"
+                        placeholder="Introduce tu correo electrónico"
+                        [ngClass]="{ 'is-invalid': submitted && f.email.errors }">
+                    <div *ngIf="submitted && f.email.errors" class="invalid-feedback">
+                        <div *ngIf="f.email.errors.required">Por favor ingresa tu correo para poder contactarte</div>
+                        <div *ngIf="f.email.errors.email">El correo electrónico debe ser una dirección de correo
+                            electrónico válida</div>
+                    </div>
+                </div>
+                <div class="form-group form-contact">
+                    <input type="phone" class="form-control" maxlength="10" formControlName="mobile"
+                        placeholder="Introduce tu numero telefónico"
+                        [ngClass]="{ 'is-invalid': submitted && f.mobile.errors }"
+                        onkeyup="this.value = this.value.replace (/ /g, ''); this.value = this.value.replace(/[^0-9]/gmi,  '').replace(/\s+/g, '')">
+                    <div *ngIf="submitted && f.mobile.errors" class="invalid-feedback">
+                        <div *ngIf="f.mobile.errors.required">Por favor introduce tu número de teléfono para poder
+                            contactarte
+                        </div>
+                        <div *ngIf="f.mobile.errors.pattern">No se aceptan letras
+                        </div>
+                        <div *ngIf="f.mobile.errors.minlength">El numero telefónico debe de ser de 10 digitos como
+                            minimo
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group form-contact">
+                    <input type="text" class="form-control" formControlName="subject"
+                        placeholder="Introduce el nombre de tu empresa o negocio"
+                        [ngClass]="{ 'is-invalid': submitted && f.subject.errors }">
+                    <div *ngIf="submitted && f.subject.errors" class="invalid-feedback">
+                        <div *ngIf="f.subject.errors.required">Por favor dinos de que empresa o negocio nos contactas
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group form-contact">
+                    <textarea class="form-control" type="textarea" formControlName="message"
+                        placeholder="En que podemos ayudarte" maxlength="1000" rows="7"
+                        [ngClass]="{ 'is-invalid': submitted && f.message.errors }"></textarea>
+                    <div *ngIf="submitted && f.message.errors" class="invalid-feedback">
+                        <div *ngIf="f.message.errors.required">Por favor dinos en que podemos ayudarte</div>
+                    </div>
+                </div>
+                <div class="text-center">
+                    <button type="submit" class="btn buttons"
+                        style="width: 90%; background-color:  #0051ff !important">Contáctenos
+                    </button>
+
+                </div>
+                <br>
+            </form>
+        </div>
+    </div>
+
+    <div style="height: 70px"></div>
+</div>
+
+
+<!-- <ng4-loading-spinner [loadingText]="'Enviando Correo...'"></ng4-loading-spinner> -->
+
+<!-- <a href="#myModalFull" role="button" class="btn btn-primary" data-toggle="modal">Launch modal</a> -->
+
+<div class="modal fade" id="myModalFull" data-backdrop="static" data-keyboard="false" tabindex="-1" role="dialog"
+    aria-hidden="true">
+    <div class="modal-dialog modal-full" role="document">
+        <div class="modal-content" style="background: #1a41d6;
+      background-image: linear-gradient(35deg, #0f0f3c, #19e0ff);">
+            <div class="modal-body p-4" id="result">
+                <div class="row">
+                    <div class=" col-12" style="text-align: center">
+                        <h1>Se envió de forma correcta el correo</h1>
+                    </div>
+                    <div class="col-12" style="text-align: center; font-size: 275px; color: green">
+                        <i class="fa fa-check fa-10x animated rotateIn"></i>
+                    </div>
+
+                    <div class=" col-12" style="text-align: center">
+                        <h3>En breve una persona se pondra en contacto contigo</h3>
+
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer" style="text-align: center">
+                <button type="button" class="btn btn-success" data-dismiss="modal">Cerrar</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="myModalFullError" data-backdrop="static" data-keyboard="false" tabindex="-1" role="dialog"
+    aria-hidden="true">
+    <div class="modal-dialog modal-full" role="document">
+        <div class="modal-content" style="background-color: rgb(233, 94, 94)">
+            <div class="modal-body p-4" id="result">
+                <div class="row">
+                    <div class=" col-12" style="text-align: center">
+                        <h1>Ocurrio un error al enviar el correo</h1>
+                    </div>
+                    <div class="col-12" style="text-align: center; font-size: 275px; color: white">
+                        <i class="fa fa-times fa-10x animated rotateIn"></i>
+                    </div>
+
+                    <div class=" col-12" style="text-align: center">
+                        <h3>Por favor contactanos mediante nuestro correo o teléfono</h3>
+
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer" style="text-align: center">
+                <button type="button" class="btn btn-primary" data-dismiss="modal">Cerrar</button>
+            </div>
+        </div>
+    </div>
+</div>

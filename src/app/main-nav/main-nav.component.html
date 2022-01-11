@@ -1,9 +1,9 @@
 <nav class="navbar navbar-expand-md navbar-dark fixed-top" id="banner" #navbar>
   <div class="container">
     <!-- Brand -->
-    <a id="logoColor" class="navbar-brand" href="#"><span><img src="./assets/img/logo/logo_tecmi.png"
+    <a id="logoColor" class="navbar-brand" [routerLink]="['/']"><span><img src="./assets/img/logo/logo_tecmi.png"
           class="logoBlanco animate__animated animate__zoomIn"></span></a>
-    <a id="logoBlanco" class="navbar-brand" href="#"><span><img src="./assets/img/logo/logo_blanco.png"
+    <a id="logoBlanco" class="navbar-brand" [routerLink]="['/']"><span><img src="./assets/img/logo/logo_blanco.png"
           class="logoBlanco animate__animated animate__lightSpeedInLeft"></span></a>
 
     <!-- Toggler/collapsibe Button -->
@@ -54,12 +54,12 @@
           <a class="nav-link" (click)="closeMenu()" [routerLinkActive]="['link_active']" [routerLink]="['/contacto']"
             [routerLinkActiveOptions]="{exact: true}">CONTACTO</a>
         </li>
-        <li class="nav-item">
+        <!-- <li class="nav-item">
           <a href="https://www.softcrud.com/" target="_blank" class="tile socialmedia"><i
               class="fa fa-facebook"></i></a>
           <a href="https://www.softcrud.com/" target="_blank" class="tile socialmedia"><i
               class="fa fa-instagram"></i></a>
-        </li>
+        </li> -->
       </ul>
     </div>
   </div>

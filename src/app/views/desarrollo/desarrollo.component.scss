@@ -5,3 +5,14 @@
 	padding-top: 6%;
 	padding-bottom: 6%;
 }
+
+#pinContainer {
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+}
+.panel {
+	height: 100%;
+	width: 100%;
+	position: absolute;
+}

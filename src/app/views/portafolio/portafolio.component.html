@@ -33,7 +33,7 @@
             <div class="tab-content py-3 px-3 px-sm-0" id="nav-tabContent">
                 <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
                     <div class="row">
-                        <div class="col-md-6 col-sm-12 botm-margn " *ngFor="let item of portafolioDev">
+                        <div class="col-md-6 col-sm-12 botm-margn digit" *ngFor="let item of portafolioDev">
                             <div class="container_init">
                                 <div class="post">
                                     <div class="header_post">
@@ -44,8 +44,7 @@
                                         <div class="post_content">
                             
                                             <h1>{{item.title}}</h1>
-                                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci animi assumenda cumque deserunt
-                                                dolorum ex exercitationem.</p>
+                                            <p>{{item.subtitle}}</p>
                             
                                             <div class="container_infos">
                                                 <!-- <div class="postedBy">
@@ -56,9 +55,8 @@
                                                 <div class="container_tags">
                                                     <!-- <span>tags</span> -->
                                                     <div class="tags">
-                                                        <ul>
-                                                            <li>design</li>
-                                                            <li>front end</li>
+                                                        <ul >
+                                                            <li *ngFor="let tags of item.skills">{{tags}}</li>                                                            
                                                         </ul>
                                                     </div>
                             
@@ -76,7 +74,7 @@
                 </div>
                 <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
                     <div class="row">
-                        <div class="col-md-6 col-sm-12 botm-margn " *ngFor="let item of portafolioDev">
+                        <div class="col-md-6 col-sm-12 botm-margn digit" *ngFor="let item of portafolioRedes">
                             <div class="container_init">
                                 <div class="post">
                                     <div class="header_post">
@@ -86,9 +84,8 @@
                                     <div class="body_post">
                                         <div class="post_content">
                             
-                                            <h1>Lorem Ipsum</h1>
-                                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci animi assumenda cumque deserunt
-                                                dolorum ex exercitationem.</p>
+                                            <h1>{{item.title}}</h1>
+                                            <p>{{item.subtitle}}</p>
                             
                                             <div class="container_infos">
                                                 <!-- <div class="postedBy">
@@ -99,9 +96,8 @@
                                                 <div class="container_tags">
                                                     <!-- <span>tags</span> -->
                                                     <div class="tags">
-                                                        <ul>
-                                                            <li>design</li>
-                                                            <li>front end</li>
+                                                        <ul *ngFor="let tags of item.skills">
+                                                            <li>{{tags}}</li>                                                            
                                                         </ul>
                                                     </div>
                             

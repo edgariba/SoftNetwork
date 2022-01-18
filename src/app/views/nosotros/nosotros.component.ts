@@ -25,7 +25,7 @@ export class NosotrosComponent implements OnInit {
 
   addAnimations(){
     var controller = new ScrollMagic.Controller();
-    var revealElements = document.getElementsByClassName("digit");
+    var revealElements = document.getElementsByClassName("servLeft");
 		for (var i=0; i<revealElements.length; i++) { // create a scene for each element
 			new ScrollMagic.Scene({
 								triggerElement: revealElements[i], // y value not modified, so we can use element as trigger as well
@@ -35,6 +35,18 @@ export class NosotrosComponent implements OnInit {
 							.setClassToggle(revealElements[i], "visible") // add class toggle
 							.addTo(controller);
     }
+
+    var revealElementsRight = document.getElementsByClassName("servRight");
+		for (var i=0; i<revealElementsRight.length; i++) { // create a scene for each element
+			new ScrollMagic.Scene({
+								triggerElement: revealElementsRight[i], // y value not modified, so we can use element as trigger as well
+								offset: 50,												 // start a little later
+								triggerHook: 0.9,
+							})
+							.setClassToggle(revealElementsRight[i], "visible") // add class toggle
+							.addTo(controller);
+    }
+    
   }
 
 }

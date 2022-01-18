@@ -15,6 +15,26 @@
 @import 'variable.scss';
 @import 'responsive.scss';
 
+
+.icono_init{
+    -webkit-animation:spin 4s linear infinite;
+    -moz-animation:spin 4s linear infinite;
+    animation:spin 4s linear infinite;
+}
+
+@-moz-keyframes spin { 
+    100% { -moz-transform: rotate(360deg); } 
+}
+@-webkit-keyframes spin { 
+    100% { -webkit-transform: rotate(360deg); } 
+}
+@keyframes spin { 
+    100% { 
+        -webkit-transform: rotate(360deg); 
+        transform:rotate(360deg); 
+    } 
+}
+
 .digit {
     opacity: 0;
     -webkit-transform: scale(0.9);
@@ -38,6 +58,46 @@
     -o-transform: none;
     transform: none;
 	
+}
+
+
+.servLeft{	
+	-webkit-transform: translateX(-150px);
+    -moz-transform: translateX(-150px);
+    -ms-transform: translateX(-150px);
+    -o-transform: translateX(-150px);
+    transform: translateX(-150px);
+    opacity: 0;
+    transition: 2s all ease;
+}
+
+.servLeft.visible {
+    opacity: 1;
+    -webkit-transform: none;
+    -moz-transform: none;
+    -ms-transform: none;
+    -o-transform: none;
+    transform: none;	
+}
+
+
+.servRight{	
+	-webkit-transform: translateX(150px);
+    -moz-transform: translateX(150px);
+    -ms-transform: translateX(150px);
+    -o-transform: translateX(150px);
+    transform: translateX(150px);
+    opacity: 0;
+    transition: 2s all ease;
+}
+
+.servRight.visible {
+    opacity: 1;
+    -webkit-transform: none;
+    -moz-transform: none;
+    -ms-transform: none;
+    -o-transform: none;
+    transform: none;	
 }
 
 .box {

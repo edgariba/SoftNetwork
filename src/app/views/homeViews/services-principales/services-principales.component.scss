@@ -103,7 +103,7 @@
     border-top: 2px solid $color_logo_1;
     border-bottom: 2px solid $color_logo_1;
     /* padding: 10px; */
-    background: #00a5f773;
+    background: $color_logo_1;
     margin-top: -20px;    
     line-height: 20px;
     text-transform: uppercase;
@@ -178,7 +178,7 @@
 }
 
 /* display 3 */
-@media (min-width: 768px) {
+/* @media (min-width: 768px) {
     
     .carousel-inner .carousel-item-right.active,
     .carousel-inner .carousel-item-next {
@@ -195,3 +195,4 @@
 .carousel-inner .carousel-item-left{ 
   transform: translateX(0);
 }
+ */

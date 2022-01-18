@@ -69,6 +69,10 @@
         "enable": true,
         "mode": "grab"
       },
+      "onclick": {
+        "enable": true,
+        "mode": "repulse"
+      },
       "resize": true
     },
     "modes": {

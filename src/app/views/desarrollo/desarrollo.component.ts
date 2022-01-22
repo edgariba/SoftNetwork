@@ -8,7 +8,7 @@ import 'ScrollMagic/scrollmagic/minified/plugins/debug.addIndicators.min.js';
   styleUrls: ['./desarrollo.component.scss']
 })
 export class DesarrolloComponent implements OnInit {
-
+  desarrollo : any[] = [1,2,3,4]
   constructor(private renderer: Renderer2) {
     this.renderer.setStyle(document.body, 'background-color', 'white');
   }

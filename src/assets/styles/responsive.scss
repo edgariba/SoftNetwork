@@ -39,7 +39,9 @@ File: scss
  ============================================================== */
 
 @media(min-width:768px) {
-    
+    .masthead .masthead-cards .card {        
+        font-size: small !important;
+    }
 }
 
 
@@ -48,5 +50,7 @@ File: scss
  ============================================================== */
 
 @media(max-width:767px) {
-    
+    .masthead .masthead-cards .card {        
+        font-size: x-small !important;
+    }
 }

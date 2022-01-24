@@ -23,6 +23,7 @@ import { PortafolioComponent } from './views/portafolio/portafolio.component';
 import { TelecomunicacionesComponent } from './views/telecomunicaciones/telecomunicaciones.component';
 import { NgxSpinnerModule } from "ngx-spinner";
 import { ToastrModule } from 'ng6-toastr-notifications';
+import { EspecialistasComponent } from './views/homeViews/especialistas/especialistas.component';
 
 @NgModule({
   declarations: [
@@ -38,7 +39,8 @@ import { ToastrModule } from 'ng6-toastr-notifications';
     CountersComponent,
     ServicesPrincipalesComponent,
     TelecomunicacionesComponent,
-    DesarrolloComponent
+    DesarrolloComponent,
+    EspecialistasComponent
   ],
   imports: [
     BrowserModule,

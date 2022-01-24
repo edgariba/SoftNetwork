@@ -2,7 +2,7 @@ import { Component, ElementRef, OnDestroy, OnInit, Renderer2, ViewChild } from '
 declare var particlesJS: any;
 import * as ScrollMagic from 'ScrollMagic';
 import 'ScrollMagic/scrollmagic/minified/plugins/debug.addIndicators.min.js';
-
+declare var $:any
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
@@ -20,19 +20,18 @@ export class HomeComponent implements OnInit, OnDestroy {
   }
 
   ngOnInit(): void {
+    
     particlesJS.load('particles-js', 'assets/particles.json', function () {
       //console.log('callback - particles.js config loaded');
     });
     var that = this
     this.timer = setInterval(() => {
       this.indice++
+      //$('.masthead').css('background-image','url(./assets/img/tecmhi/network.jpg)');
       if (that.images.length == this.indice) {
         this.indice = 0
-      }
-      //that.imageInit.nativeElement.classList.remove('animate__animated');
-      /*  that.imageInit.nativeElement.classList.remove('animate__slideInUp');
-       that.imageInit.nativeElement.classList = 'animate__slideInUp';
-       that.imageInit.nativeElement.src = that.images[i]; */
+        //$('.masthead').css('background-image','url(./assets/img/tecmhi/pexels-cottonbro-5473298.jpg)');
+      }     
     }, 3000);
     this.addAnimations()
   }

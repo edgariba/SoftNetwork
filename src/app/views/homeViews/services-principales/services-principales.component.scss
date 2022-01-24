@@ -65,13 +65,13 @@
 .transperent_block .blur {
     background-color: rgba(0, 0, 0, 0.7);
     height: 400px;
-    z-index: 5;
+    z-index: 4;
     position: absolute;
     width: 100%;
 }
 
 .transperent_block .black_hover_block_text {
-    z-index: 10;
+    z-index: 4;
     color: #fff;
     position: absolute;
     height: 400px;

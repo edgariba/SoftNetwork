@@ -26,7 +26,14 @@ export class PortafolioComponent implements OnInit {
   ]
 
   portafolioRedes: Portafolio[] = [
-    { image: "./assets/img/portafolio/tele/Rack.png", subtitle: "", title: "Experco", skills: ['FrontEnd'], ruta: '' },
+    { image: "./assets/img/portafolio/tele/Rack.png", subtitle: "", title: "Test", skills: ['FrontEnd'], ruta: '' },
+    { image: "./assets/img/portafolio/tele/ap.png", subtitle: "", title: "Test", skills: ['FrontEnd'], ruta: '' },
+    { image: "./assets/img/portafolio/tele/Grandstream.png", subtitle: "", title: "Test", skills: ['FrontEnd'], ruta: '' },
+    { image: "./assets/img/portafolio/tele/meraki.png", subtitle: "", title: "Test", skills: ['FrontEnd'], ruta: '' },
+    { image: "./assets/img/portafolio/tele/Meraki1.png", subtitle: "", title: "Test", skills: ['FrontEnd'], ruta: '' },
+    { image: "./assets/img/portafolio/tele/switch.png", subtitle: "", title: "Test", skills: ['FrontEnd'], ruta: '' },
+    { image: "./assets/img/portafolio/tele/videovigilancia.png", subtitle: "", title: "Test", skills: ['FrontEnd'], ruta: '' },
+    { image: "./assets/img/portafolio/tele/Zkteko.png", subtitle: "", title: "Test", skills: ['FrontEnd'], ruta: '' },    
   ]
   constructor(private renderer: Renderer2) {
     this.renderer.setStyle(document.body, 'background-color', 'black');

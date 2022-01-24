@@ -63,12 +63,14 @@ export class MainNavComponent implements OnInit {
   }
 
   getCurrentRoute(){    
+    $(".dropdown-toggle").dropdown();
     var ruta = this.router.url
     if(ruta.startsWith('/soluciones')){
       return true
     } else{
       return false
     }
+    
   }
 
   addClassActive() {

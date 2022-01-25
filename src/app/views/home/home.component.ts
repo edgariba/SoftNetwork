@@ -27,7 +27,7 @@ export class HomeComponent implements OnInit, OnDestroy {
       //console.log('callback - particles.js config loaded');
     });
     var that = this
-    this.timer = setInterval(() => {
+    this.timer = setInterval(() => {      
       this.indice++
       //$('.masthead').css('background-image','url(./assets/img/tecmhi/network.jpg)');
       if (that.images.length == this.indice) {
@@ -42,7 +42,7 @@ export class HomeComponent implements OnInit, OnDestroy {
     for (var i = 0; i < args.length; i++) {
       this.imgs[i] = new Image();
       this.imgs[i].src = args[i];
-      console.log('loaded: ' + args[i]);
+      //console.log('loaded: ' + args[i]);
     }
   }
   ngOnDestroy(): void {
@@ -61,32 +61,7 @@ export class HomeComponent implements OnInit, OnDestroy {
       })
         .setClassToggle(revealElements[i], "visible") // add class toggle
         .addTo(controller);
-    }
-
-    new ScrollMagic.Scene({
-      triggerElement: "#trigger1",
-      triggerHook: 0.9,
-      duration: "70%",
-      offset: 10
-    })
-      .setClassToggle("#revealbox1", "visible")
-      .addTo(controller);
-    new ScrollMagic.Scene({
-      triggerElement: "#trigger2",
-      triggerHook: 0.9,
-      duration: "70%",
-      offset: 10
-    })
-      .setClassToggle("#revealbox2", "visible")
-      .addTo(controller);
-    new ScrollMagic.Scene({
-      triggerElement: "#trigger3",
-      triggerHook: 0.9,
-      duration: "70%",
-      offset: 10
-    })
-      .setClassToggle("#revealbox3", "visible")
-      .addTo(controller);
+    }    
   }
 
 }

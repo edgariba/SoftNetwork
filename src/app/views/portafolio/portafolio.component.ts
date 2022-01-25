@@ -13,7 +13,7 @@ export class PortafolioComponent implements OnInit {
     { image: "./assets/img/portafolio/dev/g2030.PNG", subtitle: "Sistema de Información basado en censado de datos agrícolas en el Estado de Querétaro (SEJUVE).", title: "G2030 Monitoreo sustentable", skills: ['FrontEnd', 'Angular', 'Api'], ruta: '' },
     { image: "./assets/img/portafolio/dev/g2030App.png", subtitle: "Esta aplicación ayuda en la adquisición de datos de los dispositivos G2030, los cuales están colocados en los huertos comunitarios construidos por las y los voluntarios del programa Generación 2030 de la Secretaría de la Juventud del Estado de Querétaro.", title: "G2030 Monitoreo sustentable", skills: ['Android', 'Hardware', 'Arduino'], ruta: '' },
     { image: "./assets/img/portafolio/dev/experco.PNG", subtitle: "Sistema web para el control de hoteles, (Valet Parking, Encuestas de satisfacción, Pedidos al restaurante, Venta de Souvenirs). ", title: "Experco", skills: ['FrontEnd', 'Angular', 'Códigos QR', 'Api'], ruta: '' },
-    { image: "./assets/img/portafolio/dev/miMenuExperco.png", subtitle: "Sitio web totalmente responsivo para los clientes de Experco, se utiliza para realizar estas acciones: (Pedir vehiculo, Contestar encuestas, Pedidos al restaurante, Compra de Souvenirs)", title: "Mi Menú Experco", skills: ['FrontEnd', 'Ionic', 'Códigos QR'], ruta: '' },
+    { image: "./assets/img/portafolio/dev/miMenuExperco.png", subtitle: "Sitio web totalmente responsivo para los clientes de Experco, se utiliza para realizar estas acciones: (Pedir vehiculo, Conar encuestas, Pedidos al restaurante, Compra de Souvenirs)", title: "Mi Menú Experco", skills: ['FrontEnd', 'Ionic', 'Códigos QR'], ruta: '' },
     { image: "./assets/img/portafolio/dev/feuh.PNG", subtitle: "Sistema web para servicios de mensajería express.", title: "FEUH Envios", skills: ['FrontEnd', 'Angular'], ruta: '' },
     { image: "./assets/img/portafolio/dev/LibupPanel.JPG", subtitle: "Sistema web para otorgar premios o recompensas a usuarios mediante la asociación con distintas radiodifusoras.", title: "Libup Panel", skills: ['FrontEnd', 'Angular', 'Api'], ruta: '' },    
     { image: "./assets/img/portafolio/dev/Caisa.JPG", subtitle: "Esta aplicación sirve para leer, consultar e interactúar, con miles de documentos de todos los sectores Industriales y/o específico al que perteneces, necesarios para el buen desempeño de las personas y funcionamiento de las organizaciones.", title: "Sade Caisa", skills: ['FrontEnd', 'Ionic'], ruta: '' },
@@ -26,14 +26,14 @@ export class PortafolioComponent implements OnInit {
   ]
 
   portafolioRedes: Portafolio[] = [
-    { image: "./assets/img/portafolio/tele/Rack.png", subtitle: "Proyecto de cableado estructurado ya terminado organización, peinado, remate de terminales, identificación de cableado, etiquetado y pruebas escaneo de nodos para certificación.", title: "Test", skills: ['FrontEnd'], ruta: '' },
-    { image: "./assets/img/portafolio/tele/switch.png", subtitle: "Instalación de cableado estructurado categoría 7A equipo activo y envió de servicios a las áreas de trabajo.", title: "Test", skills: ['FrontEnd'], ruta: '' },
-    { image: "./assets/img/portafolio/tele/Grandstream.png", subtitle: "Implementación y administración de sistema de telefonía grandstream para servicios en call center,", title: "Test", skills: ['FrontEnd'], ruta: '' },
-    { image: "./assets/img/portafolio/tele/meraki.png", subtitle: "Instalacion y configuración de red WiFi con un sistema centralizado desde la plataforma de cisco meraki.", title: "Test", skills: ['FrontEnd'], ruta: '' },
-    { image: "./assets/img/portafolio/tele/Meraki1.png", subtitle: "", title: "Test", skills: ['FrontEnd'], ruta: '' },  
-    { image: "./assets/img/portafolio/tele/ap.png", subtitle: "Instalación y canalización de antena WiFi con cobertura amplia y administración y monitoreo desde la nube de Unifi Networks.", title: "Test", skills: ['FrontEnd'], ruta: '' },
-    { image: "./assets/img/portafolio/tele/videovigilancia.png", subtitle: "", title: "Test", skills: ['FrontEnd'], ruta: '' },
-    { image: "./assets/img/portafolio/tele/Zkteko.png", subtitle: "", title: "Test", skills: ['FrontEnd'], ruta: '' },    
+    { image: "./assets/img/portafolio/tele/Rack.png", subtitle: "Proyecto de cableado estructurado ya terminado organización, peinado, remate de terminales, identificación de cableado, etiquetado y pruebas escaneo de nodos para certificación.", title: "", skills: ['FrontEnd'], ruta: '' },
+    { image: "./assets/img/portafolio/tele/switch.png", subtitle: "Instalación de cableado estructurado categoría 7A equipo activo y envió de servicios a las áreas de trabajo.", title: "", skills: ['FrontEnd'], ruta: '' },
+    { image: "./assets/img/portafolio/tele/Grandstream.png", subtitle: "Implementación y administración de sistema de telefonía grandstream para servicios en call center,", title: "", skills: ['FrontEnd'], ruta: '' },
+    { image: "./assets/img/portafolio/tele/meraki.png", subtitle: "Instalacion y configuración de red WiFi con un sistema centralizado desde la plataforma de cisco meraki.", title: "", skills: ['FrontEnd'], ruta: '' },
+    { image: "./assets/img/portafolio/tele/Meraki1.png", subtitle: "", title: "", skills: ['FrontEnd'], ruta: '' },  
+    { image: "./assets/img/portafolio/tele/ap.png", subtitle: "Instalación y canalización de antena WiFi con cobertura amplia y administración y monitoreo desde la nube de Unifi Networks.", title: "", skills: ['FrontEnd'], ruta: '' },
+    { image: "./assets/img/portafolio/tele/videovigilancia.png", subtitle: "", title: "", skills: ['FrontEnd'], ruta: '' },
+    { image: "./assets/img/portafolio/tele/Zkteko.png", subtitle: "", title: "", skills: ['FrontEnd'], ruta: '' },    
   ]
   constructor(private renderer: Renderer2) {
     this.renderer.setStyle(document.body, 'background-color', 'black');

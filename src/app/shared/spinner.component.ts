@@ -36,33 +36,31 @@ export class SpinnerComponent implements OnDestroy {
     @Inject(DOCUMENT) private document: Document
   ) {
     this.router.events.subscribe(
-      event => {
+      (event) => {
         if (event instanceof NavigationStart) {
           this.isSpinnerVisible = true;
-          document.body.style.overflow = 'hidden';
-        } else if (
+          document.body.style.overflow = 'hidden';          
+        }
+        if (
           event instanceof NavigationEnd ||
           event instanceof NavigationCancel ||
           event instanceof NavigationError
         ) {
           this.closeSpinner()
         }
-      },
-      () => {
-        this.closeSpinner()
-      }
-    );
+      });
   }
 
   ngOnDestroy(): void {
     this.closeSpinner()
   }
 
-  closeSpinner(){
+  closeSpinner() {
     var that = this
-    setTimeout(function(){
+    setTimeout(function () {
       that.isSpinnerVisible = false;
       document.body.style.overflow = 'scroll';
-    },500);
+      document.body.style.display = 'block'
+    }, 1000);
   }
 }

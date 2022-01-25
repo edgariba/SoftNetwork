@@ -26,12 +26,12 @@ export class PortafolioComponent implements OnInit {
   ]
 
   portafolioRedes: Portafolio[] = [
-    { image: "./assets/img/portafolio/tele/Rack.png", subtitle: "", title: "Test", skills: ['FrontEnd'], ruta: '' },
-    { image: "./assets/img/portafolio/tele/switch.png", subtitle: "", title: "Test", skills: ['FrontEnd'], ruta: '' },
-    { image: "./assets/img/portafolio/tele/Grandstream.png", subtitle: "", title: "Test", skills: ['FrontEnd'], ruta: '' },
-    { image: "./assets/img/portafolio/tele/meraki.png", subtitle: "", title: "Test", skills: ['FrontEnd'], ruta: '' },
+    { image: "./assets/img/portafolio/tele/Rack.png", subtitle: "Proyecto de cableado estructurado ya terminado organización, peinado, remate de terminales, identificación de cableado, etiquetado y pruebas escaneo de nodos para certificación.", title: "Test", skills: ['FrontEnd'], ruta: '' },
+    { image: "./assets/img/portafolio/tele/switch.png", subtitle: "Instalación de cableado estructurado categoría 7A equipo activo y envió de servicios a las áreas de trabajo.", title: "Test", skills: ['FrontEnd'], ruta: '' },
+    { image: "./assets/img/portafolio/tele/Grandstream.png", subtitle: "Implementación y administración de sistema de telefonía grandstream para servicios en call center,", title: "Test", skills: ['FrontEnd'], ruta: '' },
+    { image: "./assets/img/portafolio/tele/meraki.png", subtitle: "Instalacion y configuración de red WiFi con un sistema centralizado desde la plataforma de cisco meraki.", title: "Test", skills: ['FrontEnd'], ruta: '' },
     { image: "./assets/img/portafolio/tele/Meraki1.png", subtitle: "", title: "Test", skills: ['FrontEnd'], ruta: '' },  
-    { image: "./assets/img/portafolio/tele/ap.png", subtitle: "", title: "Test", skills: ['FrontEnd'], ruta: '' },
+    { image: "./assets/img/portafolio/tele/ap.png", subtitle: "Instalación y canalización de antena WiFi con cobertura amplia y administración y monitoreo desde la nube de Unifi Networks.", title: "Test", skills: ['FrontEnd'], ruta: '' },
     { image: "./assets/img/portafolio/tele/videovigilancia.png", subtitle: "", title: "Test", skills: ['FrontEnd'], ruta: '' },
     { image: "./assets/img/portafolio/tele/Zkteko.png", subtitle: "", title: "Test", skills: ['FrontEnd'], ruta: '' },    
   ]

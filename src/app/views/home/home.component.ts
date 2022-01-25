@@ -21,8 +21,8 @@ export class HomeComponent implements OnInit, OnDestroy {
 
   ngOnInit(): void {
     this.pload(
-      "../../../assets/img/tecmhi/pexels-cottonbro-5473298.jpg",
-      "../../../assets/img/tecmhi/network.jpg")
+      "./assets/img/tecmhi/pexels-cottonbro-5473298.jpg",
+      "./assets/img/tecmhi/network.jpg")
     particlesJS.load('particles-js', 'assets/particles.json', function () {
       //console.log('callback - particles.js config loaded');
     });

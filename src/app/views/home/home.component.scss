@@ -99,11 +99,11 @@ body{margin-top:20px;}
 }
 
 .image_1{
-  background-image: url(../../../assets/img/tecmhi/pexels-cottonbro-5473298.jpg), linear-gradient(45deg, $color_logo_1 0%, $color_logo_2 100%);
+  background-image: url(../../../assets/img/tecmhi/pexels-cottonbro-5473298.jpg);
 }
 
 .image_2{
-  background-image: url(../../../assets/img/tecmhi/network.jpg), linear-gradient(45deg, $color_logo_1 0%, $color_logo_2 100%);
+  background-image: url(../../../assets/img/tecmhi/network.jpg);
 }
 
 
@@ -160,7 +160,7 @@ body{margin-top:20px;}
     position: absolute;
     height: 100%;
     width: 100%;
-    background-color: $color_logo_1;
+    /* background-color: $color_logo_1; */
     top: 0;
     left: 0;
     z-index: -1;

@@ -31,7 +31,7 @@ export class PortafolioComponent implements OnInit {
     { image: "./assets/img/portafolio/tele/Grandstream.png", subtitle: "Implementación y administración de sistema de telefonía grandstream para servicios en call center,", title: "", skills: ['FrontEnd'], ruta: '' },
     { image: "./assets/img/portafolio/tele/meraki.png", subtitle: "Instalacion y configuración de red WiFi con un sistema centralizado desde la plataforma de cisco meraki.", title: "", skills: ['FrontEnd'], ruta: '' },
     { image: "./assets/img/portafolio/tele/Meraki1.png", subtitle: "", title: "", skills: ['FrontEnd'], ruta: '' },  
-    { image: "./assets/img/portafolio/tele/ap.png", subtitle: "Instalación y canalización de antena WiFi con cobertura amplia y administración y monitoreo desde la nube de Unifi Networks.", title: "", skills: ['FrontEnd'], ruta: '' },
+    { image: "./assets/img/portafolio/tele/ap.png", subtitle: "Instalación y canalización de antena WiFi con cobertura amplia. Administración y monitoreo desde la nube de Unifi Networks.", title: "", skills: ['FrontEnd'], ruta: '' },
     { image: "./assets/img/portafolio/tele/videovigilancia.png", subtitle: "", title: "", skills: ['FrontEnd'], ruta: '' },
     { image: "./assets/img/portafolio/tele/Zkteko.png", subtitle: "", title: "", skills: ['FrontEnd'], ruta: '' },    
   ]

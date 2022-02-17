@@ -39,7 +39,8 @@ export class SpinnerComponent implements OnDestroy {
       (event) => {
         if (event instanceof NavigationStart) {
           this.isSpinnerVisible = true;
-          document.body.style.overflow = 'hidden';          
+          document.body.style.overflow = 'hidden';  
+          document.body.style.zIndex = '0'       
         }
         if (
           event instanceof NavigationEnd ||
@@ -61,6 +62,7 @@ export class SpinnerComponent implements OnDestroy {
       that.isSpinnerVisible = false;
       document.body.style.overflow = 'scroll';
       document.body.style.display = 'block'
+      document.body.style.zIndex = '1'       
     }, 1000);
   }
 }

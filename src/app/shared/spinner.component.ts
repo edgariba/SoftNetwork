@@ -59,8 +59,7 @@ export class SpinnerComponent implements OnDestroy {
     var that = this
     setTimeout(function () {
       that.isSpinnerVisible = false;
-      document.body.style.overflow = 'scroll';
-      document.body.style.display = 'block'
+      document.body.style.overflow = 'scroll';      
     }, 1000);
   }
 }

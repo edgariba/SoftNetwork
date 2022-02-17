@@ -45,7 +45,7 @@ import { EspecialistasComponent } from './views/homeViews/especialistas/especial
   imports: [
     BrowserModule,
     HttpClientModule,
-    RouterModule.forRoot(AppRoutes, { useHash: true, scrollPositionRestoration: 'enabled' }),
+    RouterModule.forRoot(AppRoutes, { useHash: false, scrollPositionRestoration: 'enabled' }),
     FormsModule,
     ReactiveFormsModule,
     BrowserAnimationsModule,
@@ -54,11 +54,11 @@ import { EspecialistasComponent } from './views/homeViews/especialistas/especial
     ToastrModule.forRoot()
   ],
   providers: [
-    { provide: LocationStrategy, useClass: HashLocationStrategy },
-   /*  {
+    /* { provide: LocationStrategy, useClass: HashLocationStrategy }, */
+    {
       provide: LocationStrategy,
       useClass: PathLocationStrategy
-   }, */
+   },
     InterfacesService
   ],
   bootstrap: [AppComponent]
